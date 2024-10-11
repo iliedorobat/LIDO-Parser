@@ -33,7 +33,7 @@
     </profiles>
 
     <build>
-        <finalName>Dublin-Core-Parser-${version}</finalName>
+        <finalName>LIDO-Parser-${version}</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
