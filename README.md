@@ -17,6 +17,11 @@ git clone https://github.com/iliedorobat/LIDO-Parser.git
 mvn validate && mvn clean package
 ```
 
+## Test the library:
+```bash
+java -jar target/LIDO-Parser-1.1-jar-with-dependencies.jar
+```
+
 ## Example
 ### Parsing:
 ```java
