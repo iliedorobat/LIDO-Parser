@@ -10,7 +10,7 @@ Maven 3.x
 2. Download and install [Maven 3.x](https://maven.apache.org/install.html)
 3. Clone the repository:
 ```bash
-git clone https://github.com/iliedorobat/Dublin-Core-Parser.git
+git clone https://github.com/iliedorobat/LIDO-Parser.git
 ```
 4. Generate the library:
 ```bash
