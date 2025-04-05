@@ -1,18 +1,19 @@
 package ro.webdata.parser.xml.lido.core.wrap.objectMeasurementsWrap;
 
-import ro.webdata.parser.xml.lido.core.set.objectMeasurementsSet.ObjectMeasurementsSetDAO;
-import ro.webdata.parser.xml.lido.core.set.objectMeasurementsSet.ObjectMeasurementsSetDAOImpl;
-import ro.webdata.parser.xml.lido.core.set.objectMeasurementsSet.ObjectMeasurementsSet;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import ro.webdata.parser.xml.lido.core.set.objectMeasurementsSet.ObjectMeasurementsSet;
+import ro.webdata.parser.xml.lido.core.set.objectMeasurementsSet.ObjectMeasurementsSetDAO;
+import ro.webdata.parser.xml.lido.core.set.objectMeasurementsSet.ObjectMeasurementsSetDAOImpl;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ObjectMeasurementsWrapDAOImpl implements ObjectMeasurementsWrapDAO {
     private static ObjectMeasurementsSetDAO objectMeasurementsSetParser = new ObjectMeasurementsSetDAOImpl();
 
     public ObjectMeasurementsWrap getObjectMeasurementsWrap(Node node) {
-        ArrayList<ObjectMeasurementsSet> objectMeasurementsSetList = new ArrayList<ObjectMeasurementsSet>();
+        List<ObjectMeasurementsSet> objectMeasurementsSetList = new ArrayList<ObjectMeasurementsSet>();
         NodeList childNodeList = node.getChildNodes();
 
         for (int i = 0; i < childNodeList.getLength(); i++) {

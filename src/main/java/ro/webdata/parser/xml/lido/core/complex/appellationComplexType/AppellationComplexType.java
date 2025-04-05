@@ -1,10 +1,10 @@
 package ro.webdata.parser.xml.lido.core.complex.appellationComplexType;
 
-import java.util.ArrayList;
-
+import ro.webdata.parser.xml.lido.common.PrintMessages;
 import ro.webdata.parser.xml.lido.core.leaf.appellationValue.AppellationValue;
 import ro.webdata.parser.xml.lido.core.leaf.sourceAppellation.SourceAppellation;
-import ro.webdata.parser.xml.lido.common.PrintMessages;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
  * <div class="lido">
@@ -32,13 +32,13 @@ import ro.webdata.parser.xml.lido.common.PrintMessages;
  *
  */
 public class AppellationComplexType {
-	private ArrayList<AppellationValue> appellationValue;
-	private ArrayList<SourceAppellation> sourceAppellation;
+	private List<AppellationValue> appellationValue;
+	private List<SourceAppellation> sourceAppellation;
 	private PrintMessages printMessages = new PrintMessages();
 
 	public AppellationComplexType() {}
 
-	public AppellationComplexType(ArrayList<AppellationValue> appellationValue, ArrayList<SourceAppellation> sourceAppellation) {
+	public AppellationComplexType(List<AppellationValue> appellationValue, List<SourceAppellation> sourceAppellation) {
 		setAppellationValue(appellationValue);
 		setSourceAppellation(sourceAppellation);
 
@@ -47,19 +47,19 @@ public class AppellationComplexType {
 		}
 	}
 
-	public ArrayList<AppellationValue> getAppellationValue() {
+	public List<AppellationValue> getAppellationValue() {
 		return appellationValue;
 	}
 
-	public void setAppellationValue(ArrayList<AppellationValue> appellationValue) {
+	public void setAppellationValue(List<AppellationValue> appellationValue) {
 		this.appellationValue = appellationValue;
 	}
 
-	public ArrayList<SourceAppellation> getSourceAppellation() {
+	public List<SourceAppellation> getSourceAppellation() {
 		return sourceAppellation;
 	}
 
-	public void setSourceAppellation(ArrayList<SourceAppellation> sourceAppellation) {
+	public void setSourceAppellation(List<SourceAppellation> sourceAppellation) {
 		this.sourceAppellation = sourceAppellation;
 	}
 }

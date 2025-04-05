@@ -1,11 +1,11 @@
 package ro.webdata.parser.xml.lido.core.leaf.resourceRepresentation;
 
-import java.util.ArrayList;
-
+import ro.webdata.parser.xml.lido.common.PrintMessages;
 import ro.webdata.parser.xml.lido.core.attribute.LidoType;
 import ro.webdata.parser.xml.lido.core.complex.measurementsSetComplexType.MeasurementsSetComplexType;
 import ro.webdata.parser.xml.lido.core.leaf.linkResource.LinkResource;
-import ro.webdata.parser.xml.lido.common.PrintMessages;
+
+import java.util.List;
 
 /**
  * <link rel="stylesheet" type="text/css" href="../../../../../javadoc.css"/>
@@ -43,14 +43,14 @@ import ro.webdata.parser.xml.lido.common.PrintMessages;
  */
 public class ResourceRepresentation {
 	private LinkResource linkResource;
-	private ArrayList<MeasurementsSetComplexType> resourceMeasurementsSet;
+	private List<MeasurementsSetComplexType> resourceMeasurementsSet;
 	private LidoType type;
 	private PrintMessages printMessages = new PrintMessages();
 
 	public ResourceRepresentation() {}
 
 	public ResourceRepresentation(LinkResource linkResource,
-			ArrayList<MeasurementsSetComplexType> resourceMeasurementsSet, LidoType type) {
+			List<MeasurementsSetComplexType> resourceMeasurementsSet, LidoType type) {
 		setLinkResource(linkResource);
 		setResourceMeasurementsSet(resourceMeasurementsSet);
 		setType(type);
@@ -68,11 +68,11 @@ public class ResourceRepresentation {
 		this.linkResource = linkResource;
 	}
 
-	public ArrayList<MeasurementsSetComplexType> getResourceMeasurementsSet() {
+	public List<MeasurementsSetComplexType> getResourceMeasurementsSet() {
 		return resourceMeasurementsSet;
 	}
 
-	public void setResourceMeasurementsSet(ArrayList<MeasurementsSetComplexType> resourceMeasurementsSet) {
+	public void setResourceMeasurementsSet(List<MeasurementsSetComplexType> resourceMeasurementsSet) {
 		this.resourceMeasurementsSet = resourceMeasurementsSet;
 	}
 

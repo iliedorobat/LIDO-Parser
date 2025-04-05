@@ -1,8 +1,8 @@
 package ro.webdata.parser.xml.lido.core.wrap.resourceWrap;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.set.resourceSet.ResourceSet;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../../javadoc.css"/>
  * <div class="lido">
@@ -33,19 +33,19 @@ import ro.webdata.parser.xml.lido.core.set.resourceSet.ResourceSet;
  *
  */
 public class ResourceWrap {
-	private ArrayList<ResourceSet> resourceSetList;
+	private List<ResourceSet> resourceSetList;
 
 	public ResourceWrap() {}
 
-	public ResourceWrap(ArrayList<ResourceSet> resourceSetList) {
+	public ResourceWrap(List<ResourceSet> resourceSetList) {
 		setResourceSet(resourceSetList);
 	}
 
-	public ArrayList<ResourceSet> getResourceSet() {
+	public List<ResourceSet> getResourceSet() {
 		return resourceSetList;
 	}
 
-	public void setResourceSet(ArrayList<ResourceSet> resourceSetList) {
+	public void setResourceSet(List<ResourceSet> resourceSetList) {
 		this.resourceSetList = resourceSetList;
 	}
 }

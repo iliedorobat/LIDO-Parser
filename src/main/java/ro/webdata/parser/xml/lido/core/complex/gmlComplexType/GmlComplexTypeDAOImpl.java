@@ -1,18 +1,19 @@
 package ro.webdata.parser.xml.lido.core.complex.gmlComplexType;
 
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import ro.webdata.parser.xml.lido.core.leaf.gml.GmlLineString;
 import ro.webdata.parser.xml.lido.core.leaf.gml.GmlPoint;
 import ro.webdata.parser.xml.lido.core.leaf.gml.GmlPolygon;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class GmlComplexTypeDAOImpl implements GmlComplexTypeDAO {
     public GmlComplexType getGmlComplexType(Node node) {
-        ArrayList<GmlPoint> gmlPointList = new ArrayList<GmlPoint>();
-        ArrayList<GmlLineString> gmlLineStringList = new ArrayList<GmlLineString>();
-        ArrayList<GmlPolygon> gmlPolygonList = new ArrayList<GmlPolygon>();
+        List<GmlPoint> gmlPointList = new ArrayList<GmlPoint>();
+        List<GmlLineString> gmlLineStringList = new ArrayList<GmlLineString>();
+        List<GmlPolygon> gmlPolygonList = new ArrayList<GmlPolygon>();
 
         NodeList childNodeList = node.getChildNodes();
         for (int i = 0; i < childNodeList.getLength(); i++) {

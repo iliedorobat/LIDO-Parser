@@ -1,11 +1,11 @@
 package ro.webdata.parser.xml.lido.core.leaf.inscriptions;
 
-import java.util.ArrayList;
-
-import ro.webdata.parser.xml.lido.core.leaf.inscriptionTranscription.InscriptionTranscription;
-import ro.webdata.parser.xml.lido.core.leaf.inscriptionDescription.InscriptionDescription;
 import ro.webdata.parser.xml.lido.core.attribute.LidoSortOrder;
 import ro.webdata.parser.xml.lido.core.attribute.LidoType;
+import ro.webdata.parser.xml.lido.core.leaf.inscriptionDescription.InscriptionDescription;
+import ro.webdata.parser.xml.lido.core.leaf.inscriptionTranscription.InscriptionTranscription;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../../javadoc.css"/>
  * <div class="lido">
@@ -42,15 +42,15 @@ import ro.webdata.parser.xml.lido.core.attribute.LidoType;
  *
  */
 public class Inscriptions {
-	private ArrayList<InscriptionTranscription> inscriptionTranscription;
-	private ArrayList<InscriptionDescription> inscriptionDescription;
+	private List<InscriptionTranscription> inscriptionTranscription;
+	private List<InscriptionDescription> inscriptionDescription;
 	private LidoType type;
 	private LidoSortOrder sortOrder;
 
 	public Inscriptions() {}
 
-	public Inscriptions(ArrayList<InscriptionTranscription> inscriptionTranscription,
-			ArrayList<InscriptionDescription> inscriptionDescription,
+	public Inscriptions(List<InscriptionTranscription> inscriptionTranscription,
+			List<InscriptionDescription> inscriptionDescription,
 			LidoType type, LidoSortOrder sortOrder) {
 		setInscriptionTranscription(inscriptionTranscription);
 		setInscriptionDescription(inscriptionDescription);
@@ -58,19 +58,19 @@ public class Inscriptions {
 		setSortOrder(sortOrder);
 	}
 
-	public ArrayList<InscriptionTranscription> getInscriptionTranscription() {
+	public List<InscriptionTranscription> getInscriptionTranscription() {
 		return inscriptionTranscription;
 	}
 
-	public void setInscriptionTranscription(ArrayList<InscriptionTranscription> inscriptionTranscription) {
+	public void setInscriptionTranscription(List<InscriptionTranscription> inscriptionTranscription) {
 		this.inscriptionTranscription = inscriptionTranscription;
 	}
 
-	public ArrayList<InscriptionDescription> getInscriptionDescription() {
+	public List<InscriptionDescription> getInscriptionDescription() {
 		return inscriptionDescription;
 	}
 
-	public void setInscriptionDescription(ArrayList<InscriptionDescription> inscriptionDescription) {
+	public void setInscriptionDescription(List<InscriptionDescription> inscriptionDescription) {
 		this.inscriptionDescription = inscriptionDescription;
 	}
 

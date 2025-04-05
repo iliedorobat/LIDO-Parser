@@ -1,18 +1,19 @@
 package ro.webdata.parser.xml.lido.core.wrap.relatedWorksWrap;
 
-import ro.webdata.parser.xml.lido.core.set.relatedWorkSet.RelatedWorkSetDAO;
-import ro.webdata.parser.xml.lido.core.set.relatedWorkSet.RelatedWorkSetDAOImpl;
-import ro.webdata.parser.xml.lido.core.set.relatedWorkSet.RelatedWorkSet;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import ro.webdata.parser.xml.lido.core.set.relatedWorkSet.RelatedWorkSet;
+import ro.webdata.parser.xml.lido.core.set.relatedWorkSet.RelatedWorkSetDAO;
+import ro.webdata.parser.xml.lido.core.set.relatedWorkSet.RelatedWorkSetDAOImpl;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RelatedWorksWrapDAOImpl implements RelatedWorksWrapDAO {
     private static RelatedWorkSetDAO relatedWorkSetParser = new RelatedWorkSetDAOImpl();
 
     public RelatedWorksWrap getRelatedWorksWrap(Node node) {
-        ArrayList<RelatedWorkSet> relatedWorkSetList = new ArrayList<RelatedWorkSet>();
+        List<RelatedWorkSet> relatedWorkSetList = new ArrayList<RelatedWorkSet>();
         NodeList childNodeList = node.getChildNodes();
 
         for (int i = 0; i < childNodeList.getLength(); i++) {

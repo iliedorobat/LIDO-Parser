@@ -1,24 +1,25 @@
 package ro.webdata.parser.xml.lido.core.wrap.recordWrap;
 
-import ro.webdata.parser.xml.lido.core.leaf.recordID.RecordIDDAO;
-import ro.webdata.parser.xml.lido.core.leaf.recordRights.RecordRightsDAO;
-import ro.webdata.parser.xml.lido.core.leaf.recordSource.RecordSourceDAO;
-import ro.webdata.parser.xml.lido.core.leaf.recordType.RecordTypeDAO;
-import ro.webdata.parser.xml.lido.core.set.recordInfoSet.RecordInfoSetDAO;
-import ro.webdata.parser.xml.lido.core.leaf.recordID.RecordIDDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.recordRights.RecordRightsDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.recordSource.RecordSourceDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.recordType.RecordTypeDAOImpl;
-import ro.webdata.parser.xml.lido.core.set.recordInfoSet.RecordInfoSetDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.recordID.RecordID;
-import ro.webdata.parser.xml.lido.core.leaf.recordRights.RecordRights;
-import ro.webdata.parser.xml.lido.core.leaf.recordSource.RecordSource;
-import ro.webdata.parser.xml.lido.core.leaf.recordType.RecordType;
-import ro.webdata.parser.xml.lido.core.set.recordInfoSet.RecordInfoSet;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import ro.webdata.parser.xml.lido.core.leaf.recordID.RecordID;
+import ro.webdata.parser.xml.lido.core.leaf.recordID.RecordIDDAO;
+import ro.webdata.parser.xml.lido.core.leaf.recordID.RecordIDDAOImpl;
+import ro.webdata.parser.xml.lido.core.leaf.recordRights.RecordRights;
+import ro.webdata.parser.xml.lido.core.leaf.recordRights.RecordRightsDAO;
+import ro.webdata.parser.xml.lido.core.leaf.recordRights.RecordRightsDAOImpl;
+import ro.webdata.parser.xml.lido.core.leaf.recordSource.RecordSource;
+import ro.webdata.parser.xml.lido.core.leaf.recordSource.RecordSourceDAO;
+import ro.webdata.parser.xml.lido.core.leaf.recordSource.RecordSourceDAOImpl;
+import ro.webdata.parser.xml.lido.core.leaf.recordType.RecordType;
+import ro.webdata.parser.xml.lido.core.leaf.recordType.RecordTypeDAO;
+import ro.webdata.parser.xml.lido.core.leaf.recordType.RecordTypeDAOImpl;
+import ro.webdata.parser.xml.lido.core.set.recordInfoSet.RecordInfoSet;
+import ro.webdata.parser.xml.lido.core.set.recordInfoSet.RecordInfoSetDAO;
+import ro.webdata.parser.xml.lido.core.set.recordInfoSet.RecordInfoSetDAOImpl;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RecordWrapDAOImpl implements RecordWrapDAO {
     private static RecordIDDAO recordIDParser = new RecordIDDAOImpl();
@@ -28,11 +29,11 @@ public class RecordWrapDAOImpl implements RecordWrapDAO {
     private static RecordInfoSetDAO recordInfoSetParser = new RecordInfoSetDAOImpl();
 
     public RecordWrap getRecordWrap(Node node) {
-        ArrayList<RecordID> recordIDList = new ArrayList<RecordID>();
+        List<RecordID> recordIDList = new ArrayList<RecordID>();
         RecordType recordType = null;
-        ArrayList<RecordSource> recordSourceList = new ArrayList<RecordSource>();
-        ArrayList<RecordRights> recordRightsList = new ArrayList<RecordRights>();
-        ArrayList<RecordInfoSet> recordInfoSetList = new ArrayList<RecordInfoSet>();
+        List<RecordSource> recordSourceList = new ArrayList<RecordSource>();
+        List<RecordRights> recordRightsList = new ArrayList<RecordRights>();
+        List<RecordInfoSet> recordInfoSetList = new ArrayList<RecordInfoSet>();
 
         NodeList childNodeList = node.getChildNodes();
         for (int i = 0; i < childNodeList.getLength(); i++) {

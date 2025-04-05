@@ -1,8 +1,8 @@
 package ro.webdata.parser.xml.lido.core.wrap.subjectWrap;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.set.subjectSet.SubjectSet;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../../javadoc.css"/>
  * <div class="lido">
@@ -28,19 +28,19 @@ import ro.webdata.parser.xml.lido.core.set.subjectSet.SubjectSet;
  *
  */
 public class SubjectWrap {
-	private ArrayList<SubjectSet> subjectSet;
+	private List<SubjectSet> subjectSet;
 
 	public SubjectWrap() {}
 
-	public SubjectWrap(ArrayList<SubjectSet> subjectSet) {
+	public SubjectWrap(List<SubjectSet> subjectSet) {
 		setSubjectSet(subjectSet);
 	}
 
-	public ArrayList<SubjectSet> getSubjectSet() {
+	public List<SubjectSet> getSubjectSet() {
 		return subjectSet;
 	}
 
-	public void setSubjectSet(ArrayList<SubjectSet> subjectSet) {
+	public void setSubjectSet(List<SubjectSet> subjectSet) {
 		this.subjectSet = subjectSet;
 	}
 }

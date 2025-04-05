@@ -1,10 +1,11 @@
 package ro.webdata.parser.xml.lido.core.wrap.lidoWrap;
 
-import java.util.ArrayList;
-
-import ro.webdata.parser.xml.lido.core.attribute.LidoRelatedEncoding;
 import ro.webdata.parser.xml.lido.common.PrintMessages;
+import ro.webdata.parser.xml.lido.core.attribute.LidoRelatedEncoding;
 import ro.webdata.parser.xml.lido.core.leaf.lido.Lido;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
  * <div class="lido">
@@ -27,13 +28,13 @@ import ro.webdata.parser.xml.lido.core.leaf.lido.Lido;
  *
  */
 public class LidoWrap {
-	private ArrayList<Lido> lidoList = new ArrayList<Lido>();
+	private List<Lido> lidoList = new ArrayList<Lido>();
 	private LidoRelatedEncoding relatedEncodingAttr;
 	private PrintMessages printMessages = new PrintMessages();
 
 	public LidoWrap() {}
 
-	public LidoWrap(ArrayList<Lido> lido, LidoRelatedEncoding relatedEncodingAttr) {
+	public LidoWrap(List<Lido> lido, LidoRelatedEncoding relatedEncodingAttr) {
 		setLidoList(lido);
 		setRelatedEncodingAttr(relatedEncodingAttr);
 
@@ -42,11 +43,11 @@ public class LidoWrap {
 		}
 	}
 
-	public ArrayList<Lido> getLidoList() {
+	public List<Lido> getLidoList() {
 		return lidoList;
 	}
 
-	public void setLidoList(ArrayList<Lido> lidoList) {
+	public void setLidoList(List<Lido> lidoList) {
 		this.lidoList = lidoList;
 	}
 

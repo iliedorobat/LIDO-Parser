@@ -1,9 +1,9 @@
 package ro.webdata.parser.xml.lido.core.complex.actorInRoleSetComplexType;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.leaf.actorInRole.ActorInRole;
 import ro.webdata.parser.xml.lido.core.leaf.displayActorInRole.DisplayActorInRole;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
  * <div class="lido">
@@ -38,21 +38,21 @@ import ro.webdata.parser.xml.lido.core.leaf.displayActorInRole.DisplayActorInRol
  *
  */
 public class ActorInRoleSetComplexType {
-	private ArrayList<DisplayActorInRole> displayActorInRole;
+	private List<DisplayActorInRole> displayActorInRole;
 	private ActorInRole actorInRole;
 
 	public ActorInRoleSetComplexType() {}
 
-	public ActorInRoleSetComplexType(ArrayList<DisplayActorInRole> displayActorInRole, ActorInRole actorInRole) {
+	public ActorInRoleSetComplexType(List<DisplayActorInRole> displayActorInRole, ActorInRole actorInRole) {
 		setActorInRole(actorInRole);
 		setDisplayActorInRole(displayActorInRole);
 	}
 
-	public ArrayList<DisplayActorInRole> getDisplayActorInRole() {
+	public List<DisplayActorInRole> getDisplayActorInRole() {
 		return displayActorInRole;
 	}
 
-	public void setDisplayActorInRole(ArrayList<DisplayActorInRole> displayActorInRole) {
+	public void setDisplayActorInRole(List<DisplayActorInRole> displayActorInRole) {
 		this.displayActorInRole = displayActorInRole;
 	}
 

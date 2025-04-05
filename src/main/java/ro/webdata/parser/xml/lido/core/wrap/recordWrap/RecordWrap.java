@@ -1,14 +1,14 @@
 package ro.webdata.parser.xml.lido.core.wrap.recordWrap;
 
-import java.util.ArrayList;
-
-import ro.webdata.parser.xml.lido.core.wrap.objectWorkTypeWrap.ObjectWorkTypeWrap;
+import ro.webdata.parser.xml.lido.common.PrintMessages;
 import ro.webdata.parser.xml.lido.core.leaf.recordID.RecordID;
 import ro.webdata.parser.xml.lido.core.leaf.recordRights.RecordRights;
 import ro.webdata.parser.xml.lido.core.leaf.recordSource.RecordSource;
 import ro.webdata.parser.xml.lido.core.leaf.recordType.RecordType;
 import ro.webdata.parser.xml.lido.core.set.recordInfoSet.RecordInfoSet;
-import ro.webdata.parser.xml.lido.common.PrintMessages;
+import ro.webdata.parser.xml.lido.core.wrap.objectWorkTypeWrap.ObjectWorkTypeWrap;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../../javadoc.css"/>
  * <div class="lido">
@@ -46,17 +46,17 @@ import ro.webdata.parser.xml.lido.common.PrintMessages;
  *
  */
 public class RecordWrap {
-	private ArrayList<RecordID> recordID;
+	private List<RecordID> recordID;
 	private RecordType recordType;
-	private ArrayList<RecordSource> recordSource;
-	private ArrayList<RecordRights> recordRights;
-	private ArrayList<RecordInfoSet> recordInfoSet;
+	private List<RecordSource> recordSource;
+	private List<RecordRights> recordRights;
+	private List<RecordInfoSet> recordInfoSet;
 	private PrintMessages printMessages = new PrintMessages();
 
 	public RecordWrap() {}
 
-	public RecordWrap(ArrayList<RecordID> recordID, RecordType recordType, ArrayList<RecordSource> recordSource,
-			ArrayList<RecordRights> recordRights, ArrayList<RecordInfoSet> recordInfoSet) {
+	public RecordWrap(List<RecordID> recordID, RecordType recordType, List<RecordSource> recordSource,
+			List<RecordRights> recordRights, List<RecordInfoSet> recordInfoSet) {
 		setRecordID(recordID);
 		setRecordType(recordType);
 		setRecordSource(recordSource);
@@ -76,11 +76,11 @@ public class RecordWrap {
 		}
 	}
 
-	public ArrayList<RecordID> getRecordID() {
+	public List<RecordID> getRecordID() {
 		return recordID;
 	}
 
-	public void setRecordID(ArrayList<RecordID> recordID) {
+	public void setRecordID(List<RecordID> recordID) {
 		this.recordID = recordID;
 	}
 
@@ -92,27 +92,27 @@ public class RecordWrap {
 		this.recordType = recordType;
 	}
 
-	public ArrayList<RecordSource> getRecordSource() {
+	public List<RecordSource> getRecordSource() {
 		return recordSource;
 	}
 
-	public void setRecordSource(ArrayList<RecordSource> recordSource) {
+	public void setRecordSource(List<RecordSource> recordSource) {
 		this.recordSource = recordSource;
 	}
 
-	public ArrayList<RecordRights> getRecordRights() {
+	public List<RecordRights> getRecordRights() {
 		return recordRights;
 	}
 
-	public void setRecordRights(ArrayList<RecordRights> recordRights) {
+	public void setRecordRights(List<RecordRights> recordRights) {
 		this.recordRights = recordRights;
 	}
 
-	public ArrayList<RecordInfoSet> getRecordInfoSet() {
+	public List<RecordInfoSet> getRecordInfoSet() {
 		return recordInfoSet;
 	}
 
-	public void setRecordInfoSet(ArrayList<RecordInfoSet> recordInfoSet) {
+	public void setRecordInfoSet(List<RecordInfoSet> recordInfoSet) {
 		this.recordInfoSet = recordInfoSet;
 	}
 }

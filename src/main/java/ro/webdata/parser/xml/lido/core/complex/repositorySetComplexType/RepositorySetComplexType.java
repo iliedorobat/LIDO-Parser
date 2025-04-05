@@ -1,12 +1,12 @@
 package ro.webdata.parser.xml.lido.core.complex.repositorySetComplexType;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.attribute.LidoSortOrder;
 import ro.webdata.parser.xml.lido.core.attribute.LidoType;
 import ro.webdata.parser.xml.lido.core.leaf.repositoryLocation.RepositoryLocation;
 import ro.webdata.parser.xml.lido.core.leaf.repositoryName.RepositoryName;
 import ro.webdata.parser.xml.lido.core.leaf.workID.WorkID;
+
+import java.util.List;
 
 /**
  * <link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
@@ -51,14 +51,14 @@ import ro.webdata.parser.xml.lido.core.leaf.workID.WorkID;
  */
 public class RepositorySetComplexType {
 	private RepositoryName repositoryName;
-	private ArrayList<WorkID> workID;
+	private List<WorkID> workID;
 	private RepositoryLocation repositoryLocation;
 	private LidoType type;
 	private LidoSortOrder sortOrder;
 
 	public RepositorySetComplexType() {}
 
-	public RepositorySetComplexType(RepositoryName repositoryName, ArrayList<WorkID> workID,
+	public RepositorySetComplexType(RepositoryName repositoryName, List<WorkID> workID,
 	RepositoryLocation repositoryLocation, LidoType type, LidoSortOrder sortOrder) {
 		setRepositoryName(repositoryName);
 		setWorkID(workID);
@@ -75,11 +75,11 @@ public class RepositorySetComplexType {
 		this.repositoryName = repositoryName;
 	}
 
-	public ArrayList<WorkID> getWorkID() {
+	public List<WorkID> getWorkID() {
 		return workID;
 	}
 
-	public void setWorkID(ArrayList<WorkID> workID) {
+	public void setWorkID(List<WorkID> workID) {
 		this.workID = workID;
 	}
 

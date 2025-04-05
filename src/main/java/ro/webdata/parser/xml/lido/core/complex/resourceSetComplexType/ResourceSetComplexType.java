@@ -1,7 +1,5 @@
 package ro.webdata.parser.xml.lido.core.complex.resourceSetComplexType;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.leaf.resourceDateTaken.ResourceDateTaken;
 import ro.webdata.parser.xml.lido.core.leaf.resourceDescription.ResourceDescription;
 import ro.webdata.parser.xml.lido.core.leaf.resourceID.ResourceID;
@@ -11,6 +9,8 @@ import ro.webdata.parser.xml.lido.core.leaf.resourceRepresentation.ResourceRepre
 import ro.webdata.parser.xml.lido.core.leaf.resourceSource.ResourceSource;
 import ro.webdata.parser.xml.lido.core.leaf.resourceType.ResourceType;
 import ro.webdata.parser.xml.lido.core.leaf.rightsResource.RightsResource;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
  * <div class="lido">
@@ -88,21 +88,21 @@ import ro.webdata.parser.xml.lido.core.leaf.rightsResource.RightsResource;
  */
 public class ResourceSetComplexType {
 	private ResourceID resourceID;
-	private ArrayList<ResourceRepresentation> resourceRepresentation;
+	private List<ResourceRepresentation> resourceRepresentation;
 	private ResourceType resourceType;
-	private ArrayList<ResourceRelType> resourceRelType;
-	private ArrayList<ResourcePerspective> resourcePerspective;
-	private ArrayList<ResourceDescription> resourceDescription;
+	private List<ResourceRelType> resourceRelType;
+	private List<ResourcePerspective> resourcePerspective;
+	private List<ResourceDescription> resourceDescription;
 	private ResourceDateTaken resourceDateTaken;
-	private ArrayList<ResourceSource> resourceSource;
-	private ArrayList<RightsResource> rightsResource;
+	private List<ResourceSource> resourceSource;
+	private List<RightsResource> rightsResource;
 
 	public ResourceSetComplexType() {}
 
-	public ResourceSetComplexType(ResourceID resourceID, ArrayList<ResourceRepresentation> resourceRepresentation,
-			ResourceType resourceType, ArrayList<ResourceRelType> resourceRelType,
-			ArrayList<ResourcePerspective> resourcePerspective, ArrayList<ResourceDescription> resourceDescription,
-			ResourceDateTaken resourceDateTaken, ArrayList<ResourceSource> resourceSource, ArrayList<RightsResource> rightsResource) {
+	public ResourceSetComplexType(ResourceID resourceID, List<ResourceRepresentation> resourceRepresentation,
+			ResourceType resourceType, List<ResourceRelType> resourceRelType,
+			List<ResourcePerspective> resourcePerspective, List<ResourceDescription> resourceDescription,
+			ResourceDateTaken resourceDateTaken, List<ResourceSource> resourceSource, List<RightsResource> rightsResource) {
 		setResourceID(resourceID);
 		setResourceRepresentation(resourceRepresentation);
 		setResourceType(resourceType);
@@ -122,11 +122,11 @@ public class ResourceSetComplexType {
 		this.resourceID = resourceID;
 	}
 
-	public ArrayList<ResourceRepresentation> getResourceRepresentation() {
+	public List<ResourceRepresentation> getResourceRepresentation() {
 		return resourceRepresentation;
 	}
 
-	public void setResourceRepresentation(ArrayList<ResourceRepresentation> resourceRepresentation) {
+	public void setResourceRepresentation(List<ResourceRepresentation> resourceRepresentation) {
 		this.resourceRepresentation = resourceRepresentation;
 	}
 
@@ -138,27 +138,27 @@ public class ResourceSetComplexType {
 		this.resourceType = resourceType;
 	}
 
-	public ArrayList<ResourceRelType> getResourceRelType() {
+	public List<ResourceRelType> getResourceRelType() {
 		return resourceRelType;
 	}
 
-	public void setResourceRelType(ArrayList<ResourceRelType> resourceRelType) {
+	public void setResourceRelType(List<ResourceRelType> resourceRelType) {
 		this.resourceRelType = resourceRelType;
 	}
 
-	public ArrayList<ResourcePerspective> getResourcePerspective() {
+	public List<ResourcePerspective> getResourcePerspective() {
 		return resourcePerspective;
 	}
 
-	public void setResourcePerspective(ArrayList<ResourcePerspective> resourcePerspective) {
+	public void setResourcePerspective(List<ResourcePerspective> resourcePerspective) {
 		this.resourcePerspective = resourcePerspective;
 	}
 
-	public ArrayList<ResourceDescription> getResourceDescription() {
+	public List<ResourceDescription> getResourceDescription() {
 		return resourceDescription;
 	}
 
-	public void setResourceDescription(ArrayList<ResourceDescription> resourceDescription) {
+	public void setResourceDescription(List<ResourceDescription> resourceDescription) {
 		this.resourceDescription = resourceDescription;
 	}
 
@@ -170,19 +170,19 @@ public class ResourceSetComplexType {
 		this.resourceDateTaken = resourceDateTaken;
 	}
 
-	public ArrayList<ResourceSource> getResourceSource() {
+	public List<ResourceSource> getResourceSource() {
 		return resourceSource;
 	}
 
-	public void setResourceSource(ArrayList<ResourceSource> resourceSource) {
+	public void setResourceSource(List<ResourceSource> resourceSource) {
 		this.resourceSource = resourceSource;
 	}
 
-	public ArrayList<RightsResource> getRightsResource() {
+	public List<RightsResource> getRightsResource() {
 		return rightsResource;
 	}
 
-	public void setRightsResource(ArrayList<RightsResource> rightsResource) {
+	public void setRightsResource(List<RightsResource> rightsResource) {
 		this.rightsResource = rightsResource;
 	}
 }

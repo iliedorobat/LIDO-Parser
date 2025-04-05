@@ -1,10 +1,10 @@
 package ro.webdata.parser.xml.lido.core.complex.objectComplexType;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.leaf.objectID.ObjectID;
 import ro.webdata.parser.xml.lido.core.leaf.objectNote.ObjectNote;
 import ro.webdata.parser.xml.lido.core.leaf.objectWebResource.ObjectWebResource;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
  * <div class="lido">
@@ -39,40 +39,40 @@ import ro.webdata.parser.xml.lido.core.leaf.objectWebResource.ObjectWebResource;
  *
  */
 public class ObjectComplexType {
-	private ArrayList<ObjectWebResource> objectWebResource;
-	private ArrayList<ObjectID> objectID;
-	private ArrayList<ObjectNote> objectNote;
+	private List<ObjectWebResource> objectWebResource;
+	private List<ObjectID> objectID;
+	private List<ObjectNote> objectNote;
 
 	public ObjectComplexType() {}
 
-	public ObjectComplexType(ArrayList<ObjectWebResource> objectWebResource, ArrayList<ObjectID> objectID,
-			ArrayList<ObjectNote> objectNote) {
+	public ObjectComplexType(List<ObjectWebResource> objectWebResource, List<ObjectID> objectID,
+			List<ObjectNote> objectNote) {
 		setObjectID(objectID);
 		setObjectNote(objectNote);
 		setObjectWebResource(objectWebResource);
 	}
 
-	public ArrayList<ObjectWebResource> getObjectWebResource() {
+	public List<ObjectWebResource> getObjectWebResource() {
 		return objectWebResource;
 	}
 
-	public void setObjectWebResource(ArrayList<ObjectWebResource> objectWebResource) {
+	public void setObjectWebResource(List<ObjectWebResource> objectWebResource) {
 		this.objectWebResource = objectWebResource;
 	}
 
-	public ArrayList<ObjectID> getObjectID() {
+	public List<ObjectID> getObjectID() {
 		return objectID;
 	}
 
-	public void setObjectID(ArrayList<ObjectID> objectID) {
+	public void setObjectID(List<ObjectID> objectID) {
 		this.objectID = objectID;
 	}
 
-	public ArrayList<ObjectNote> getObjectNote() {
+	public List<ObjectNote> getObjectNote() {
 		return objectNote;
 	}
 
-	public void setObjectNote(ArrayList<ObjectNote> objectNote) {
+	public void setObjectNote(List<ObjectNote> objectNote) {
 		this.objectNote = objectNote;
 	}
 }

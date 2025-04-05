@@ -1,11 +1,11 @@
 package ro.webdata.parser.xml.lido.core.complex.rightsComplexType;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.leaf.creditLine.CreditLine;
 import ro.webdata.parser.xml.lido.core.leaf.rightsDate.RightsDate;
 import ro.webdata.parser.xml.lido.core.leaf.rightsHolder.RightsHolder;
 import ro.webdata.parser.xml.lido.core.leaf.rightsType.RightsType;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
  * <div class="lido">
@@ -44,26 +44,26 @@ import ro.webdata.parser.xml.lido.core.leaf.rightsType.RightsType;
  *
  */
 public class RightsComplexType {
-	private ArrayList<RightsType> rightsType;
+	private List<RightsType> rightsType;
 	private RightsDate rightsDate;
-	private ArrayList<RightsHolder> rightsHolder;
-	private ArrayList<CreditLine> creditLine;
+	private List<RightsHolder> rightsHolder;
+	private List<CreditLine> creditLine;
 
 	public RightsComplexType() {}
 
-	public RightsComplexType(ArrayList<RightsType> rightsType, RightsDate rightsDate,
-			ArrayList<RightsHolder> rightsHolder, ArrayList<CreditLine> creditLine) {
+	public RightsComplexType(List<RightsType> rightsType, RightsDate rightsDate,
+			List<RightsHolder> rightsHolder, List<CreditLine> creditLine) {
 		setRightsType(rightsType);
 		setRightsDate(rightsDate);
 		setRightsHolder(rightsHolder);
 		setCreditLine(creditLine);
 	}
 
-	public ArrayList<RightsType> getRightsType() {
+	public List<RightsType> getRightsType() {
 		return rightsType;
 	}
 
-	public void setRightsType(ArrayList<RightsType> rightsType) {
+	public void setRightsType(List<RightsType> rightsType) {
 		this.rightsType = rightsType;
 	}
 
@@ -75,19 +75,19 @@ public class RightsComplexType {
 		this.rightsDate = rightsDate;
 	}
 
-	public ArrayList<RightsHolder> getRightsHolder() {
+	public List<RightsHolder> getRightsHolder() {
 		return rightsHolder;
 	}
 
-	public void setRightsHolder(ArrayList<RightsHolder> rightsHolder) {
+	public void setRightsHolder(List<RightsHolder> rightsHolder) {
 		this.rightsHolder = rightsHolder;
 	}
 
-	public ArrayList<CreditLine> getCreditLine() {
+	public List<CreditLine> getCreditLine() {
 		return creditLine;
 	}
 
-	public void setCreditLine(ArrayList<CreditLine> creditLine) {
+	public void setCreditLine(List<CreditLine> creditLine) {
 		this.creditLine = creditLine;
 	}
 }

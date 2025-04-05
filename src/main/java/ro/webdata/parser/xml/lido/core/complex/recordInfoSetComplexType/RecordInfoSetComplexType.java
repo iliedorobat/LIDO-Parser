@@ -1,11 +1,11 @@
 package ro.webdata.parser.xml.lido.core.complex.recordInfoSetComplexType;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.attribute.LidoType;
 import ro.webdata.parser.xml.lido.core.leaf.recordInfoID.RecordInfoID;
 import ro.webdata.parser.xml.lido.core.leaf.recordInfoLink.RecordInfoLink;
 import ro.webdata.parser.xml.lido.core.leaf.recordMetadataDate.RecordMetadataDate;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
  * <div class="lido">
@@ -48,42 +48,42 @@ import ro.webdata.parser.xml.lido.core.leaf.recordMetadataDate.RecordMetadataDat
  *
  */
 public class RecordInfoSetComplexType {
-	private ArrayList<RecordInfoID> recordInfoID;
-	private ArrayList<RecordInfoLink> recordInfoLink;
-	private ArrayList<RecordMetadataDate> recordMetadataDate;
+	private List<RecordInfoID> recordInfoID;
+	private List<RecordInfoLink> recordInfoLink;
+	private List<RecordMetadataDate> recordMetadataDate;
 	private LidoType type;
 
 	public RecordInfoSetComplexType() {}
 
-	public RecordInfoSetComplexType(ArrayList<RecordInfoID> recordInfoID, ArrayList<RecordInfoLink> recordInfoLink,
-			ArrayList<RecordMetadataDate> recordMetadataDate, LidoType type) {
+	public RecordInfoSetComplexType(List<RecordInfoID> recordInfoID, List<RecordInfoLink> recordInfoLink,
+			List<RecordMetadataDate> recordMetadataDate, LidoType type) {
 		setRecordInfoID(recordInfoID);
 		setRecordInfoLink(recordInfoLink);
 		setRecordMetadataDate(recordMetadataDate);
 		setType(type);
 	}
 
-	public ArrayList<RecordInfoID >getRecordInfoID() {
+	public List<RecordInfoID >getRecordInfoID() {
 		return recordInfoID;
 	}
 
-	public void setRecordInfoID(ArrayList<RecordInfoID> recordInfoID) {
+	public void setRecordInfoID(List<RecordInfoID> recordInfoID) {
 		this.recordInfoID = recordInfoID;
 	}
 
-	public ArrayList<RecordInfoLink> getRecordInfoLink() {
+	public List<RecordInfoLink> getRecordInfoLink() {
 		return recordInfoLink;
 	}
 
-	public void setRecordInfoLink(ArrayList<RecordInfoLink> recordInfoLink) {
+	public void setRecordInfoLink(List<RecordInfoLink> recordInfoLink) {
 		this.recordInfoLink = recordInfoLink;
 	}
 
-	public ArrayList<RecordMetadataDate> getRecordMetadataDate() {
+	public List<RecordMetadataDate> getRecordMetadataDate() {
 		return recordMetadataDate;
 	}
 
-	public void setRecordMetadataDate(ArrayList<RecordMetadataDate> recordMetadataDate) {
+	public void setRecordMetadataDate(List<RecordMetadataDate> recordMetadataDate) {
 		this.recordMetadataDate = recordMetadataDate;
 	}
 

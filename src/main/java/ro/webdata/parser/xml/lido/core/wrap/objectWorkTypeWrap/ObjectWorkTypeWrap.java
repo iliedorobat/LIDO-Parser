@@ -1,9 +1,9 @@
 package ro.webdata.parser.xml.lido.core.wrap.objectWorkTypeWrap;
 
-import java.util.ArrayList;
-
-import ro.webdata.parser.xml.lido.core.leaf.objectWorkType.ObjectWorkType;
 import ro.webdata.parser.xml.lido.common.PrintMessages;
+import ro.webdata.parser.xml.lido.core.leaf.objectWorkType.ObjectWorkType;
+
+import java.util.List;
 
 /**
  * <link rel="stylesheet" type="text/css" href="../../../../javadoc.css"/>
@@ -27,12 +27,12 @@ import ro.webdata.parser.xml.lido.common.PrintMessages;
  *
  */
 public class ObjectWorkTypeWrap {
-	private ArrayList<ObjectWorkType> objectWorkType;
+	private List<ObjectWorkType> objectWorkType;
 	private PrintMessages printMessages = new PrintMessages();
 
 	public ObjectWorkTypeWrap() {}
 
-	public ObjectWorkTypeWrap(ArrayList<ObjectWorkType> objectWorkType) {
+	public ObjectWorkTypeWrap(List<ObjectWorkType> objectWorkType) {
 		setObjectWorkType(objectWorkType);
 
 		if (objectWorkType == null || objectWorkType.isEmpty()) {
@@ -40,11 +40,11 @@ public class ObjectWorkTypeWrap {
 		}
 	}
 
-	public ArrayList<ObjectWorkType> getObjectWorkType() {
+	public List<ObjectWorkType> getObjectWorkType() {
 		return objectWorkType;
 	}
 
-	public void setObjectWorkType(ArrayList<ObjectWorkType> objectWorkType) {
+	public void setObjectWorkType(List<ObjectWorkType> objectWorkType) {
 		this.objectWorkType = objectWorkType;
 	}
 }

@@ -1,14 +1,14 @@
 package ro.webdata.parser.xml.lido.core.complex.actorComplexType;
 
-import java.util.ArrayList;
-
+import ro.webdata.parser.xml.lido.common.PrintMessages;
 import ro.webdata.parser.xml.lido.core.attribute.LidoType;
 import ro.webdata.parser.xml.lido.core.leaf.actorID.ActorID;
 import ro.webdata.parser.xml.lido.core.leaf.genderActor.GenderActor;
 import ro.webdata.parser.xml.lido.core.leaf.nationalityActor.NationalityActor;
 import ro.webdata.parser.xml.lido.core.leaf.vitalDatesActor.VitalDatesActor;
 import ro.webdata.parser.xml.lido.core.set.nameActorSet.NameActorSet;
-import ro.webdata.parser.xml.lido.common.PrintMessages;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
  * <div class="lido">
@@ -70,19 +70,19 @@ import ro.webdata.parser.xml.lido.common.PrintMessages;
  *
  */
 public class ActorComplexType {
-	private ArrayList<ActorID> actorID;
-	private ArrayList<NameActorSet> nameActorSet;
-	private ArrayList<NationalityActor> nationalityActor;
+	private List<ActorID> actorID;
+	private List<NameActorSet> nameActorSet;
+	private List<NationalityActor> nationalityActor;
 	private VitalDatesActor vitalDatesActor;
-	private ArrayList<GenderActor> genderActor;
+	private List<GenderActor> genderActor;
 	private LidoType type;
 	private PrintMessages printMessages = new PrintMessages();
 
 	public ActorComplexType() {}
 
-	public ActorComplexType(ArrayList<ActorID> actorID, ArrayList<NameActorSet> nameActorSet,
-			ArrayList<NationalityActor> nationalityActor, VitalDatesActor vitalDatesActor,
-			ArrayList<GenderActor> genderActor, LidoType type) {
+	public ActorComplexType(List<ActorID> actorID, List<NameActorSet> nameActorSet,
+			List<NationalityActor> nationalityActor, VitalDatesActor vitalDatesActor,
+			List<GenderActor> genderActor, LidoType type) {
 		setActorID(actorID);
 		setGenderActor(genderActor);
 		setNameActorSet(nameActorSet);
@@ -95,27 +95,27 @@ public class ActorComplexType {
 		}
 	}
 
-	public ArrayList<ActorID> getActorID() {
+	public List<ActorID> getActorID() {
 		return actorID;
 	}
 
-	public void setActorID(ArrayList<ActorID> actorID) {
+	public void setActorID(List<ActorID> actorID) {
 		this.actorID = actorID;
 	}
 
-	public ArrayList<NameActorSet> getNameActorSet() {
+	public List<NameActorSet> getNameActorSet() {
 		return nameActorSet;
 	}
 
-	public void setNameActorSet(ArrayList<NameActorSet> nameActorSet) {
+	public void setNameActorSet(List<NameActorSet> nameActorSet) {
 		this.nameActorSet = nameActorSet;
 	}
 
-	public ArrayList<NationalityActor> getNationalityActor() {
+	public List<NationalityActor> getNationalityActor() {
 		return nationalityActor;
 	}
 
-	public void setNationalityActor(ArrayList<NationalityActor> nationalityActor) {
+	public void setNationalityActor(List<NationalityActor> nationalityActor) {
 		this.nationalityActor = nationalityActor;
 	}
 
@@ -127,11 +127,11 @@ public class ActorComplexType {
 		this.vitalDatesActor = vitalDatesActor;
 	}
 
-	public ArrayList<GenderActor> getGenderActor() {
+	public List<GenderActor> getGenderActor() {
 		return genderActor;
 	}
 
-	public void setGenderActor(ArrayList<GenderActor> genderActor) {
+	public void setGenderActor(List<GenderActor> genderActor) {
 		this.genderActor = genderActor;
 	}
 

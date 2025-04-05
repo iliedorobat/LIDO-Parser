@@ -2,9 +2,6 @@ package ro.webdata.parser.xml.lido.core.complex.resourceSetComplexType;
 
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import ro.webdata.parser.xml.lido.core.leaf.rightsResource.RightsResourceDAO;
-import ro.webdata.parser.xml.lido.core.leaf.rightsResource.RightsResourceDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.rightsResource.RightsResource;
 import ro.webdata.parser.xml.lido.core.leaf.resourceDateTaken.ResourceDateTaken;
 import ro.webdata.parser.xml.lido.core.leaf.resourceDateTaken.ResourceDateTakenDAO;
 import ro.webdata.parser.xml.lido.core.leaf.resourceDateTaken.ResourceDateTakenDAOImpl;
@@ -29,8 +26,12 @@ import ro.webdata.parser.xml.lido.core.leaf.resourceSource.ResourceSourceDAOImpl
 import ro.webdata.parser.xml.lido.core.leaf.resourceType.ResourceType;
 import ro.webdata.parser.xml.lido.core.leaf.resourceType.ResourceTypeDAO;
 import ro.webdata.parser.xml.lido.core.leaf.resourceType.ResourceTypeDAOImpl;
+import ro.webdata.parser.xml.lido.core.leaf.rightsResource.RightsResource;
+import ro.webdata.parser.xml.lido.core.leaf.rightsResource.RightsResourceDAO;
+import ro.webdata.parser.xml.lido.core.leaf.rightsResource.RightsResourceDAOImpl;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ResourceSetComplexTypeDAOImpl implements ResourceSetComplexTypeDAO {
     private static ResourceIDDAO resourceIDParser = new ResourceIDDAOImpl();
@@ -45,14 +46,14 @@ public class ResourceSetComplexTypeDAOImpl implements ResourceSetComplexTypeDAO 
 
     public ResourceSetComplexType getResourceSetComplexType(Node node) {
         ResourceID resourceID = null;
-        ArrayList<ResourceRepresentation> resourceRepresentationList = new ArrayList<ResourceRepresentation>();
+        List<ResourceRepresentation> resourceRepresentationList = new ArrayList<ResourceRepresentation>();
         ResourceType resourceType = null;
-        ArrayList<ResourceRelType> resourceRelTypeList = new ArrayList<ResourceRelType>();
-        ArrayList<ResourcePerspective> resourcePerspectiveList = new ArrayList<ResourcePerspective>();
-        ArrayList<ResourceDescription> resourceDescriptionListList = new ArrayList<ResourceDescription>();
+        List<ResourceRelType> resourceRelTypeList = new ArrayList<ResourceRelType>();
+        List<ResourcePerspective> resourcePerspectiveList = new ArrayList<ResourcePerspective>();
+        List<ResourceDescription> resourceDescriptionListList = new ArrayList<ResourceDescription>();
         ResourceDateTaken resourceDateTaken = null;
-        ArrayList<ResourceSource> resourceSourceList = new ArrayList<ResourceSource>();
-        ArrayList<RightsResource> rightsResourceList = new ArrayList<RightsResource>();
+        List<ResourceSource> resourceSourceList = new ArrayList<ResourceSource>();
+        List<RightsResource> rightsResourceList = new ArrayList<RightsResource>();
 
         NodeList childNodeList = node.getChildNodes();
         for (int i = 0; i < childNodeList.getLength(); i++) {

@@ -1,9 +1,9 @@
 package ro.webdata.parser.xml.lido.core.complex.eventSetComplexType;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.leaf.displayEvent.DisplayEvent;
 import ro.webdata.parser.xml.lido.core.leaf.event.Event;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
  * <div class="lido">
@@ -35,21 +35,21 @@ import ro.webdata.parser.xml.lido.core.leaf.event.Event;
  *
  */
 public class EventSetComplexType {
-	private ArrayList<DisplayEvent> displayEvent;
+	private List<DisplayEvent> displayEvent;
 	private Event event;
 
 	public EventSetComplexType() {}
 
-	public EventSetComplexType(ArrayList<DisplayEvent> displayEvent, Event event) {
+	public EventSetComplexType(List<DisplayEvent> displayEvent, Event event) {
 		setDisplayEvent(displayEvent);
 		setEvent(event);
 	}
 
-	public ArrayList<DisplayEvent> getDisplayEvent() {
+	public List<DisplayEvent> getDisplayEvent() {
 		return displayEvent;
 	}
 
-	public void setDisplayEvent(ArrayList<DisplayEvent> displayEvent) {
+	public void setDisplayEvent(List<DisplayEvent> displayEvent) {
 		this.displayEvent = displayEvent;
 	}
 

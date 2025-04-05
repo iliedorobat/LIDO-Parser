@@ -1,7 +1,5 @@
 package ro.webdata.parser.xml.lido.core.complex.subjectComplexType;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.attribute.LidoType;
 import ro.webdata.parser.xml.lido.core.leaf.extentSubject.ExtentSubject;
 import ro.webdata.parser.xml.lido.core.leaf.subjectActorDAOImpl.SubjectActor;
@@ -10,6 +8,8 @@ import ro.webdata.parser.xml.lido.core.leaf.subjectDate.SubjectDate;
 import ro.webdata.parser.xml.lido.core.leaf.subjectEvent.SubjectEvent;
 import ro.webdata.parser.xml.lido.core.leaf.subjectObject.SubjectObject;
 import ro.webdata.parser.xml.lido.core.leaf.subjectPlace.SubjectPlace;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
  * <div class="lido">
@@ -84,20 +84,20 @@ import ro.webdata.parser.xml.lido.core.leaf.subjectPlace.SubjectPlace;
  *
  */
 public class SubjectComplexType {
-	private ArrayList<ExtentSubject> extentSubject;
-	private ArrayList<SubjectConcept> subjectConcept;
-	private ArrayList<SubjectActor> subjectActor;
-	private ArrayList<SubjectDate> subjectDate;
-	private ArrayList<SubjectEvent> subjectEvent;
-	private ArrayList<SubjectPlace> subjectPlace;
-	private ArrayList<SubjectObject> subjectObject;
+	private List<ExtentSubject> extentSubject;
+	private List<SubjectConcept> subjectConcept;
+	private List<SubjectActor> subjectActor;
+	private List<SubjectDate> subjectDate;
+	private List<SubjectEvent> subjectEvent;
+	private List<SubjectPlace> subjectPlace;
+	private List<SubjectObject> subjectObject;
 	private LidoType type;
 
 	public SubjectComplexType() {}
 
-	public SubjectComplexType(ArrayList<ExtentSubject> extentSubject, ArrayList<SubjectConcept> subjectConcept,
-			ArrayList<SubjectActor> subjectActor, ArrayList<SubjectDate> subjectDate, ArrayList<SubjectEvent> subjectEvent,
-			ArrayList<SubjectPlace> subjectPlace, ArrayList<SubjectObject> subjectObject, LidoType type) {
+	public SubjectComplexType(List<ExtentSubject> extentSubject, List<SubjectConcept> subjectConcept,
+			List<SubjectActor> subjectActor, List<SubjectDate> subjectDate, List<SubjectEvent> subjectEvent,
+			List<SubjectPlace> subjectPlace, List<SubjectObject> subjectObject, LidoType type) {
 		setExtentSubject(extentSubject);
 		setSubjectActor(subjectActor);
 		setSubjectConcept(subjectConcept);
@@ -108,59 +108,59 @@ public class SubjectComplexType {
 		setType(type);
 	}
 
-	public ArrayList<ExtentSubject> getExtentSubject() {
+	public List<ExtentSubject> getExtentSubject() {
 		return extentSubject;
 	}
 
-	public void setExtentSubject(ArrayList<ExtentSubject> extentSubject) {
+	public void setExtentSubject(List<ExtentSubject> extentSubject) {
 		this.extentSubject = extentSubject;
 	}
 
-	public ArrayList<SubjectConcept> getSubjectConcept() {
+	public List<SubjectConcept> getSubjectConcept() {
 		return subjectConcept;
 	}
 
-	public void setSubjectConcept(ArrayList<SubjectConcept> subjectConcept) {
+	public void setSubjectConcept(List<SubjectConcept> subjectConcept) {
 		this.subjectConcept = subjectConcept;
 	}
 
-	public ArrayList<SubjectActor> getSubjectActor() {
+	public List<SubjectActor> getSubjectActor() {
 		return subjectActor;
 	}
 
-	public void setSubjectActor(ArrayList<SubjectActor> subjectActor) {
+	public void setSubjectActor(List<SubjectActor> subjectActor) {
 		this.subjectActor = subjectActor;
 	}
 
-	public ArrayList<SubjectDate> getSubjectDate() {
+	public List<SubjectDate> getSubjectDate() {
 		return subjectDate;
 	}
 
-	public void setSubjectDate(ArrayList<SubjectDate> subjectDate) {
+	public void setSubjectDate(List<SubjectDate> subjectDate) {
 		this.subjectDate = subjectDate;
 	}
 
-	public ArrayList<SubjectEvent> getSubjectEvent() {
+	public List<SubjectEvent> getSubjectEvent() {
 		return subjectEvent;
 	}
 
-	public void setSubjectEvent(ArrayList<SubjectEvent> subjectEvent) {
+	public void setSubjectEvent(List<SubjectEvent> subjectEvent) {
 		this.subjectEvent = subjectEvent;
 	}
 
-	public ArrayList<SubjectPlace> getSubjectPlace() {
+	public List<SubjectPlace> getSubjectPlace() {
 		return subjectPlace;
 	}
 
-	public void setSubjectPlace(ArrayList<SubjectPlace> subjectPlace) {
+	public void setSubjectPlace(List<SubjectPlace> subjectPlace) {
 		this.subjectPlace = subjectPlace;
 	}
 
-	public ArrayList<SubjectObject> getSubjectObject() {
+	public List<SubjectObject> getSubjectObject() {
 		return subjectObject;
 	}
 
-	public void setSubjectObject(ArrayList<SubjectObject> subjectObject) {
+	public void setSubjectObject(List<SubjectObject> subjectObject) {
 		this.subjectObject = subjectObject;
 	}
 	

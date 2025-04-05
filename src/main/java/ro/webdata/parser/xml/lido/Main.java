@@ -8,7 +8,7 @@ import ro.webdata.parser.xml.lido.core.leaf.eventDate.EventDate;
 import ro.webdata.parser.xml.lido.core.set.eventSet.EventSet;
 import ro.webdata.parser.xml.lido.core.wrap.lidoWrap.LidoWrap;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 //	http://www.lido-schema.org/schema/v1.0/lido-v1.0-schema-listing.html#conceptComplexType
@@ -50,7 +50,7 @@ public class Main {
 		LidoWrap lidoWrap = parserDAO.parseLidoFile(xmlFilePath);
 
 		DescriptiveMetadata descriptiveMetadata = lidoWrap.getLidoList().get(0).getDescriptiveMetadata().get(0);
-		ArrayList<EventSet> eventSets = descriptiveMetadata.getEventWrap().getEventSet();
+		List<EventSet> eventSets = descriptiveMetadata.getEventWrap().getEventSet();
 
 		for (int i = 0; i < eventSets.size(); i++) {
 			EventDate eventDate = eventSets.get(i).getEvent().getEventDate();

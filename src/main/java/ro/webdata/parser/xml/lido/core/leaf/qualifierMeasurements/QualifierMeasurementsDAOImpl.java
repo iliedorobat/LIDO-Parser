@@ -6,13 +6,13 @@ import ro.webdata.parser.xml.lido.core.attribute.LidoSortOrder;
 import ro.webdata.parser.xml.lido.core.complex.textComplexType.TextComplexTypeDAO;
 import ro.webdata.parser.xml.lido.core.complex.textComplexType.TextComplexTypeDAOImpl;
 
-import java.util.HashMap;
+import java.util.Map;
 
 public class QualifierMeasurementsDAOImpl implements QualifierMeasurementsDAO {
     private static TextComplexTypeDAO textComplexTypeDAO = new TextComplexTypeDAOImpl();
 
     public QualifierMeasurements getQualifierMeasurements(Node node) {
-        HashMap<String, String> attributes = Graph.getAttributes(node);
+        Map<String, String> attributes = Graph.getAttributes(node);
 
         return new QualifierMeasurements(
                 textComplexTypeDAO.getTextComplexType(node),

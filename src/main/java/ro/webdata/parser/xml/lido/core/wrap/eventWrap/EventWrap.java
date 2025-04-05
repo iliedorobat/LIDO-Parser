@@ -1,8 +1,9 @@
 package ro.webdata.parser.xml.lido.core.wrap.eventWrap;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.set.eventSet.EventSet;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <link rel="stylesheet" type="text/css" href="../../../../javadoc.css"/>
@@ -26,19 +27,19 @@ import ro.webdata.parser.xml.lido.core.set.eventSet.EventSet;
  *
  */
 public class EventWrap {
-	private ArrayList<EventSet> eventSet = new ArrayList<EventSet>();
+	private List<EventSet> eventSet = new ArrayList<EventSet>();
 
 	public EventWrap() {}
 
-	public EventWrap(ArrayList<EventSet> eventSet) {
+	public EventWrap(List<EventSet> eventSet) {
 		setEventSet(eventSet);
 	}
 
-	public ArrayList<EventSet> getEventSet() {
+	public List<EventSet> getEventSet() {
 		return eventSet;
 	}
 
-	public void setEventSet(ArrayList<EventSet> eventSet) {
+	public void setEventSet(List<EventSet> eventSet) {
 		this.eventSet = eventSet;
 	}
 }

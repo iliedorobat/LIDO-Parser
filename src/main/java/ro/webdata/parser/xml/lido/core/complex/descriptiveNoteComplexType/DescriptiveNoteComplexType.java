@@ -1,12 +1,12 @@
 package ro.webdata.parser.xml.lido.core.complex.descriptiveNoteComplexType;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.attribute.LidoSortOrder;
 import ro.webdata.parser.xml.lido.core.attribute.LidoType;
 import ro.webdata.parser.xml.lido.core.leaf.descriptiveNoteID.DescriptiveNoteID;
 import ro.webdata.parser.xml.lido.core.leaf.descriptiveNoteValue.DescriptiveNoteValue;
 import ro.webdata.parser.xml.lido.core.leaf.sourceDescriptiveNote.SourceDescriptiveNote;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
  * <div class="lido">
@@ -45,17 +45,17 @@ import ro.webdata.parser.xml.lido.core.leaf.sourceDescriptiveNote.SourceDescript
  *
  */
 public class DescriptiveNoteComplexType {
-	private ArrayList<DescriptiveNoteID> descriptiveNoteID;
-	private ArrayList<DescriptiveNoteValue> descriptiveNoteValue;
-	private ArrayList<SourceDescriptiveNote> sourceDescriptiveNote;
+	private List<DescriptiveNoteID> descriptiveNoteID;
+	private List<DescriptiveNoteValue> descriptiveNoteValue;
+	private List<SourceDescriptiveNote> sourceDescriptiveNote;
 	private LidoType type;
 	private LidoSortOrder sortOrder;
 
 	public DescriptiveNoteComplexType() {}
 
-	public DescriptiveNoteComplexType(ArrayList<DescriptiveNoteID> descriptiveNoteID,
-			ArrayList<DescriptiveNoteValue> descriptiveNoteValue,
-			ArrayList<SourceDescriptiveNote> sourceDescriptiveNote,
+	public DescriptiveNoteComplexType(List<DescriptiveNoteID> descriptiveNoteID,
+			List<DescriptiveNoteValue> descriptiveNoteValue,
+			List<SourceDescriptiveNote> sourceDescriptiveNote,
 			LidoType type, LidoSortOrder sortOrder) {
 		setDescriptiveNoteID(descriptiveNoteID);
 		setDescriptiveNoteValue(descriptiveNoteValue);
@@ -64,27 +64,27 @@ public class DescriptiveNoteComplexType {
 		setSortOrder(sortOrder);
 	}
 
-	public ArrayList<DescriptiveNoteID> getDescriptiveNoteID() {
+	public List<DescriptiveNoteID> getDescriptiveNoteID() {
 		return descriptiveNoteID;
 	}
 
-	public void setDescriptiveNoteID(ArrayList<DescriptiveNoteID> descriptiveNoteID) {
+	public void setDescriptiveNoteID(List<DescriptiveNoteID> descriptiveNoteID) {
 		this.descriptiveNoteID = descriptiveNoteID;
 	}
 
-	public ArrayList<DescriptiveNoteValue> getDescriptiveNoteValue() {
+	public List<DescriptiveNoteValue> getDescriptiveNoteValue() {
 		return descriptiveNoteValue;
 	}
 
-	public void setDescriptiveNoteValue(ArrayList<DescriptiveNoteValue> descriptiveNoteValue) {
+	public void setDescriptiveNoteValue(List<DescriptiveNoteValue> descriptiveNoteValue) {
 		this.descriptiveNoteValue = descriptiveNoteValue;
 	}
 
-	public ArrayList<SourceDescriptiveNote> getSourceDescriptiveNote() {
+	public List<SourceDescriptiveNote> getSourceDescriptiveNote() {
 		return sourceDescriptiveNote;
 	}
 
-	public void setSourceDescriptiveNote(ArrayList<SourceDescriptiveNote> sourceDescriptiveNote) {
+	public void setSourceDescriptiveNote(List<SourceDescriptiveNote> sourceDescriptiveNote) {
 		this.sourceDescriptiveNote = sourceDescriptiveNote;
 	}
 

@@ -1,23 +1,23 @@
 package ro.webdata.parser.xml.lido.core.complex.descriptiveMetadataComplexType;
 
-import ro.webdata.echo.commons.graph.Graph;
-import ro.webdata.parser.xml.lido.core.wrap.eventWrap.EventWrapDAO;
-import ro.webdata.parser.xml.lido.core.wrap.objectClassificationWrap.ObjectClassificationWrapDAO;
-import ro.webdata.parser.xml.lido.core.wrap.objectIdentificationWrap.ObjectIdentificationWrapDAO;
-import ro.webdata.parser.xml.lido.core.wrap.objectRelationWrap.ObjectRelationWrapDAO;
-import ro.webdata.parser.xml.lido.core.wrap.eventWrap.EventWrapDAOImpl;
-import ro.webdata.parser.xml.lido.core.wrap.objectClassificationWrap.ObjectClassificationWrapDAOImpl;
-import ro.webdata.parser.xml.lido.core.wrap.objectIdentificationWrap.ObjectIdentificationWrapDAOImpl;
-import ro.webdata.parser.xml.lido.core.wrap.objectRelationWrap.ObjectRelationWrapDAOImpl;
-import ro.webdata.parser.xml.lido.core.attribute.XmlLang;
-import ro.webdata.parser.xml.lido.core.wrap.eventWrap.EventWrap;
-import ro.webdata.parser.xml.lido.core.wrap.objectClassificationWrap.ObjectClassificationWrap;
-import ro.webdata.parser.xml.lido.core.wrap.objectIdentificationWrap.ObjectIdentificationWrap;
-import ro.webdata.parser.xml.lido.core.wrap.objectRelationWrap.ObjectRelationWrap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import ro.webdata.echo.commons.graph.Graph;
+import ro.webdata.parser.xml.lido.core.attribute.XmlLang;
+import ro.webdata.parser.xml.lido.core.wrap.eventWrap.EventWrap;
+import ro.webdata.parser.xml.lido.core.wrap.eventWrap.EventWrapDAO;
+import ro.webdata.parser.xml.lido.core.wrap.eventWrap.EventWrapDAOImpl;
+import ro.webdata.parser.xml.lido.core.wrap.objectClassificationWrap.ObjectClassificationWrap;
+import ro.webdata.parser.xml.lido.core.wrap.objectClassificationWrap.ObjectClassificationWrapDAO;
+import ro.webdata.parser.xml.lido.core.wrap.objectClassificationWrap.ObjectClassificationWrapDAOImpl;
+import ro.webdata.parser.xml.lido.core.wrap.objectIdentificationWrap.ObjectIdentificationWrap;
+import ro.webdata.parser.xml.lido.core.wrap.objectIdentificationWrap.ObjectIdentificationWrapDAO;
+import ro.webdata.parser.xml.lido.core.wrap.objectIdentificationWrap.ObjectIdentificationWrapDAOImpl;
+import ro.webdata.parser.xml.lido.core.wrap.objectRelationWrap.ObjectRelationWrap;
+import ro.webdata.parser.xml.lido.core.wrap.objectRelationWrap.ObjectRelationWrapDAO;
+import ro.webdata.parser.xml.lido.core.wrap.objectRelationWrap.ObjectRelationWrapDAOImpl;
 
-import java.util.HashMap;
+import java.util.Map;
 
 public class DescriptiveMetadataComplexTypeDAOImpl implements DescriptiveMetadataComplexTypeDAO {
     private static ObjectClassificationWrapDAO objectClassificationWrapDAO = new ObjectClassificationWrapDAOImpl();
@@ -30,7 +30,7 @@ public class DescriptiveMetadataComplexTypeDAOImpl implements DescriptiveMetadat
         ObjectIdentificationWrap objectIdentificationWrap = new ObjectIdentificationWrap();
         EventWrap eventWrap = new EventWrap();
         ObjectRelationWrap objectRelationWrap = new ObjectRelationWrap();
-        HashMap<String, String> attributes = Graph.getAttributes(node);
+        Map<String, String> attributes = Graph.getAttributes(node);
 
         NodeList childNodeList = node.getChildNodes();
         for (int i = 0; i < childNodeList.getLength(); i++) {

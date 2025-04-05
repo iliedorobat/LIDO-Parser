@@ -1,9 +1,9 @@
 package ro.webdata.parser.xml.lido.core.complex.placeSetComplexType;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.leaf.displayPlace.DisplayPlace;
 import ro.webdata.parser.xml.lido.core.leaf.place.Place;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
  * <div class="lido">
@@ -31,21 +31,21 @@ import ro.webdata.parser.xml.lido.core.leaf.place.Place;
  *
  */
 public class PlaceSetComplexType {
-	private ArrayList<DisplayPlace> displayPlace;
+	private List<DisplayPlace> displayPlace;
 	private Place place;
 
 	public PlaceSetComplexType() {}
 
-	public PlaceSetComplexType(ArrayList<DisplayPlace> displayPlace, Place place) {
+	public PlaceSetComplexType(List<DisplayPlace> displayPlace, Place place) {
 		setDisplayPlace(displayPlace);
 		setPlace(place);
 	}
 
-	public ArrayList<DisplayPlace> getDisplayPlace() {
+	public List<DisplayPlace> getDisplayPlace() {
 		return displayPlace;
 	}
 
-	public void setDisplayPlace(ArrayList<DisplayPlace> displayPlace) {
+	public void setDisplayPlace(List<DisplayPlace> displayPlace) {
 		this.displayPlace = displayPlace;
 	}
 

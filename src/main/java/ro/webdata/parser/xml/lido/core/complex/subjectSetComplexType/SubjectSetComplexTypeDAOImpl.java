@@ -1,22 +1,23 @@
 package ro.webdata.parser.xml.lido.core.complex.subjectSetComplexType;
 
-import ro.webdata.parser.xml.lido.core.leaf.displaySubject.DisplaySubjectDAO;
-import ro.webdata.parser.xml.lido.core.leaf.subject.SubjectDAO;
-import ro.webdata.parser.xml.lido.core.leaf.displaySubject.DisplaySubjectDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.subject.SubjectDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.displaySubject.DisplaySubject;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import ro.webdata.parser.xml.lido.core.leaf.displaySubject.DisplaySubject;
+import ro.webdata.parser.xml.lido.core.leaf.displaySubject.DisplaySubjectDAO;
+import ro.webdata.parser.xml.lido.core.leaf.displaySubject.DisplaySubjectDAOImpl;
 import ro.webdata.parser.xml.lido.core.leaf.subject.Subject;
+import ro.webdata.parser.xml.lido.core.leaf.subject.SubjectDAO;
+import ro.webdata.parser.xml.lido.core.leaf.subject.SubjectDAOImpl;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class SubjectSetComplexTypeDAOImpl implements SubjectSetComplexTypeDAO {
     private static DisplaySubjectDAO displaySubjectParser = new DisplaySubjectDAOImpl();
     private static SubjectDAO subjectDAOParser = new SubjectDAOImpl();
 
     public SubjectSetComplexType getSubjectSetComplexType(Node node) {
-        ArrayList<DisplaySubject> displaySubjectList = new ArrayList<DisplaySubject>();
+        List<DisplaySubject> displaySubjectList = new ArrayList<DisplaySubject>();
         Subject subject = null;
 
         NodeList childNodeList = node.getChildNodes();

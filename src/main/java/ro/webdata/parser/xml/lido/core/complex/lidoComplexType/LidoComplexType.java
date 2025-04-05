@@ -1,14 +1,14 @@
 package ro.webdata.parser.xml.lido.core.complex.lidoComplexType;
 
-import java.util.ArrayList;
-
+import ro.webdata.parser.xml.lido.common.PrintMessages;
 import ro.webdata.parser.xml.lido.core.attribute.LidoRelatedEncoding;
 import ro.webdata.parser.xml.lido.core.leaf.administrativeMetadata.AdministrativeMetadata;
 import ro.webdata.parser.xml.lido.core.leaf.category.Category;
 import ro.webdata.parser.xml.lido.core.leaf.descriptiveMetadata.DescriptiveMetadata;
 import ro.webdata.parser.xml.lido.core.leaf.lidoRecID.LidoRecID;
 import ro.webdata.parser.xml.lido.core.leaf.objectPublishedID.ObjectPublishedID;
-import ro.webdata.parser.xml.lido.common.PrintMessages;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
  * <div class="lido">
@@ -54,19 +54,19 @@ import ro.webdata.parser.xml.lido.common.PrintMessages;
  *
  */
 public class LidoComplexType {
-	private ArrayList<LidoRecID> lidoRecID;
-	private ArrayList<ObjectPublishedID> objectPublishedID;
+	private List<LidoRecID> lidoRecID;
+	private List<ObjectPublishedID> objectPublishedID;
 	private Category category;
-	private ArrayList<DescriptiveMetadata> descriptiveMetadata;
-	private ArrayList<AdministrativeMetadata> administrativeMetadata;
+	private List<DescriptiveMetadata> descriptiveMetadata;
+	private List<AdministrativeMetadata> administrativeMetadata;
 	private LidoRelatedEncoding relatedEncoding;
 	private PrintMessages printMessages = new PrintMessages();
 
 	public LidoComplexType() {}
 
-	public LidoComplexType(ArrayList<LidoRecID> lidoRecID, ArrayList<ObjectPublishedID> objectPublishedID,
-			Category category, ArrayList<DescriptiveMetadata> descriptiveMetadata,
-			ArrayList<AdministrativeMetadata> administrativeMetadata, LidoRelatedEncoding relatedencoding) {
+	public LidoComplexType(List<LidoRecID> lidoRecID, List<ObjectPublishedID> objectPublishedID,
+			Category category, List<DescriptiveMetadata> descriptiveMetadata,
+			List<AdministrativeMetadata> administrativeMetadata, LidoRelatedEncoding relatedencoding) {
 		setLidoRecID(lidoRecID);
 		setObjectPublishedID(objectPublishedID);
 		setCategory(category);
@@ -87,19 +87,19 @@ public class LidoComplexType {
 		}
 	}
 
-	public ArrayList<LidoRecID> getLidoRecID() {
+	public List<LidoRecID> getLidoRecID() {
 		return lidoRecID;
 	}
 
-	public void setLidoRecID(ArrayList<LidoRecID> lidoRecID) {
+	public void setLidoRecID(List<LidoRecID> lidoRecID) {
 		this.lidoRecID = lidoRecID;
 	}
 
-	public ArrayList<ObjectPublishedID> getObjectPublishedID() {
+	public List<ObjectPublishedID> getObjectPublishedID() {
 		return objectPublishedID;
 	}
 
-	public void setObjectPublishedID(ArrayList<ObjectPublishedID> objectPublishedID) {
+	public void setObjectPublishedID(List<ObjectPublishedID> objectPublishedID) {
 		this.objectPublishedID = objectPublishedID;
 	}
 
@@ -111,19 +111,19 @@ public class LidoComplexType {
 		this.category = category;
 	}
 
-	public ArrayList<DescriptiveMetadata> getDescriptiveMetadata() {
+	public List<DescriptiveMetadata> getDescriptiveMetadata() {
 		return descriptiveMetadata;
 	}
 
-	public void setDescriptiveMetadata(ArrayList<DescriptiveMetadata> descriptiveMetadata) {
+	public void setDescriptiveMetadata(List<DescriptiveMetadata> descriptiveMetadata) {
 		this.descriptiveMetadata = descriptiveMetadata;
 	}
 
-	public ArrayList<AdministrativeMetadata> getAdministrativeMetadata() {
+	public List<AdministrativeMetadata> getAdministrativeMetadata() {
 		return administrativeMetadata;
 	}
 
-	public void setAdministrativeMetadata(ArrayList<AdministrativeMetadata> administrativeMetadata) {
+	public void setAdministrativeMetadata(List<AdministrativeMetadata> administrativeMetadata) {
 		this.administrativeMetadata = administrativeMetadata;
 	}
 

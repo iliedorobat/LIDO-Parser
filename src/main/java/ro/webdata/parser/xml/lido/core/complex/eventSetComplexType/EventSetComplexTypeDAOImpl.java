@@ -1,22 +1,23 @@
 package ro.webdata.parser.xml.lido.core.complex.eventSetComplexType;
 
-import ro.webdata.parser.xml.lido.core.leaf.displayEvent.DisplayEventDAO;
-import ro.webdata.parser.xml.lido.core.leaf.event.EventDAO;
-import ro.webdata.parser.xml.lido.core.leaf.displayEvent.DisplayEventDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.event.EventDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.displayEvent.DisplayEvent;
-import ro.webdata.parser.xml.lido.core.leaf.event.Event;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import ro.webdata.parser.xml.lido.core.leaf.displayEvent.DisplayEvent;
+import ro.webdata.parser.xml.lido.core.leaf.displayEvent.DisplayEventDAO;
+import ro.webdata.parser.xml.lido.core.leaf.displayEvent.DisplayEventDAOImpl;
+import ro.webdata.parser.xml.lido.core.leaf.event.Event;
+import ro.webdata.parser.xml.lido.core.leaf.event.EventDAO;
+import ro.webdata.parser.xml.lido.core.leaf.event.EventDAOImpl;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class EventSetComplexTypeDAOImpl implements EventSetComplexTypeDAO {
     private static DisplayEventDAO displayEventParser = new DisplayEventDAOImpl();
     private static EventDAO eventParser = new EventDAOImpl();
 
     public EventSetComplexType getEventSetComplexType(Node node) {
-        ArrayList<DisplayEvent> displayEventList = new ArrayList<DisplayEvent>();
+        List<DisplayEvent> displayEventList = new ArrayList<DisplayEvent>();
         Event event = new Event();
 
         NodeList childNodeList = node.getChildNodes();

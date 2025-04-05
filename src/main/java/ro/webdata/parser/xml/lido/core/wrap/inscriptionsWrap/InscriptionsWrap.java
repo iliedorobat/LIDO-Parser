@@ -1,8 +1,8 @@
 package ro.webdata.parser.xml.lido.core.wrap.inscriptionsWrap;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.leaf.inscriptions.Inscriptions;
+
+import java.util.List;
 
 /**
  * <link rel="stylesheet" type="text/css" href="../../../../javadoc.css"/>
@@ -28,19 +28,19 @@ import ro.webdata.parser.xml.lido.core.leaf.inscriptions.Inscriptions;
  *
  */
 public class InscriptionsWrap {
-	private ArrayList<Inscriptions> inscriptions;
+	private List<Inscriptions> inscriptions;
 
 	public InscriptionsWrap() {}
 
-	public InscriptionsWrap(ArrayList<Inscriptions> inscriptions) {
+	public InscriptionsWrap(List<Inscriptions> inscriptions) {
 		setInscriptions(inscriptions);
 	}
 
-	public ArrayList<Inscriptions> getInscriptions() {
+	public List<Inscriptions> getInscriptions() {
 		return inscriptions;
 	}
 
-	public void setInscriptions(ArrayList<Inscriptions> inscriptions) {
+	public void setInscriptions(List<Inscriptions> inscriptions) {
 		this.inscriptions = inscriptions;
 	}
 }

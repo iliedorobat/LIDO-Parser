@@ -1,8 +1,8 @@
 package ro.webdata.parser.xml.lido.core.wrap.objectDescriptionWrap;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.set.objectDescriptionSet.ObjectDescriptionSet;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../../javadoc.css"/>
  * <div class="lido">
@@ -30,19 +30,19 @@ import ro.webdata.parser.xml.lido.core.set.objectDescriptionSet.ObjectDescriptio
  *
  */
 public class ObjectDescriptionWrap {
-	private ArrayList<ObjectDescriptionSet> objectDescriptionSet;
+	private List<ObjectDescriptionSet> objectDescriptionSet;
 
 	public ObjectDescriptionWrap() {}
 
-	public ObjectDescriptionWrap(ArrayList<ObjectDescriptionSet> objectDescriptionSet) {
+	public ObjectDescriptionWrap(List<ObjectDescriptionSet> objectDescriptionSet) {
 		setObjectDescriptionSet(objectDescriptionSet);
 	}
 
-	public ArrayList<ObjectDescriptionSet> getObjectDescriptionSet() {
+	public List<ObjectDescriptionSet> getObjectDescriptionSet() {
 		return objectDescriptionSet;
 	}
 
-	public void setObjectDescriptionSet(ArrayList<ObjectDescriptionSet> objectDescriptionSet) {
+	public void setObjectDescriptionSet(List<ObjectDescriptionSet> objectDescriptionSet) {
 		this.objectDescriptionSet = objectDescriptionSet;
 	}
 }
