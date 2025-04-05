@@ -1,13 +1,13 @@
 package ro.webdata.parser.xml.lido.core.leaf.lido;
 
-import java.util.ArrayList;
-
+import ro.webdata.parser.xml.lido.common.PrintMessages;
 import ro.webdata.parser.xml.lido.core.attribute.LidoSortOrder;
 import ro.webdata.parser.xml.lido.core.complex.lidoComplexType.LidoComplexType;
 import ro.webdata.parser.xml.lido.core.leaf.administrativeMetadata.AdministrativeMetadata;
 import ro.webdata.parser.xml.lido.core.leaf.descriptiveMetadata.DescriptiveMetadata;
 import ro.webdata.parser.xml.lido.core.leaf.lidoRecID.LidoRecID;
-import ro.webdata.parser.xml.lido.common.PrintMessages;
+
+import java.util.List;
 
 /**
  * <link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
@@ -45,9 +45,9 @@ public class Lido extends LidoComplexType {
 		);
 		setSortorder(sortorder);
 
-		ArrayList<LidoRecID> lidoRecID = lidoComplexType.getLidoRecID();
-		ArrayList<DescriptiveMetadata> descriptiveMetadata = lidoComplexType.getDescriptiveMetadata();
-		ArrayList<AdministrativeMetadata> administrativeMetadata = lidoComplexType.getAdministrativeMetadata();
+		List<LidoRecID> lidoRecID = lidoComplexType.getLidoRecID();
+		List<DescriptiveMetadata> descriptiveMetadata = lidoComplexType.getDescriptiveMetadata();
+		List<AdministrativeMetadata> administrativeMetadata = lidoComplexType.getAdministrativeMetadata();
 
 		if (lidoRecID == null || lidoRecID.isEmpty()) {
 			printMessages.printEmptyArray(LidoComplexType.class, "lido:lidoRecID");

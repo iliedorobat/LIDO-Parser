@@ -1,8 +1,8 @@
 package ro.webdata.parser.xml.lido.core.wrap.classificationWrap;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.leaf.classification.Classification;
+
+import java.util.List;
 
 /**
  * <link rel="stylesheet" type="text/css" href="../../../../javadoc.css"/>
@@ -33,19 +33,19 @@ import ro.webdata.parser.xml.lido.core.leaf.classification.Classification;
  *
  */
 public class ClassificationWrap {
-	private ArrayList<Classification> classification;
+	private List<Classification> classification;
 
 	public ClassificationWrap() {}
 
-	public ClassificationWrap(ArrayList<Classification> classification) {
+	public ClassificationWrap(List<Classification> classification) {
 		setClassification(classification);
 	}
 
-	public ArrayList<Classification> getClassification() {
+	public List<Classification> getClassification() {
 		return classification;
 	}
 
-	public void setClassification(ArrayList<Classification> classification) {
+	public void setClassification(List<Classification> classification) {
 		this.classification = classification;
 	}
 }

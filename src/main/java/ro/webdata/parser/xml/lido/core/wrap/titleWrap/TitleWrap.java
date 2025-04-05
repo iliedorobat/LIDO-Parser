@@ -1,10 +1,10 @@
 package ro.webdata.parser.xml.lido.core.wrap.titleWrap;
 
-import java.util.ArrayList;
-
-import ro.webdata.parser.xml.lido.core.wrap.objectWorkTypeWrap.ObjectWorkTypeWrap;
-import ro.webdata.parser.xml.lido.core.set.titleSet.TitleSet;
 import ro.webdata.parser.xml.lido.common.PrintMessages;
+import ro.webdata.parser.xml.lido.core.set.titleSet.TitleSet;
+import ro.webdata.parser.xml.lido.core.wrap.objectWorkTypeWrap.ObjectWorkTypeWrap;
+
+import java.util.List;
 
 /**
  * <link rel="stylesheet" type="text/css" href="../../../../javadoc.css"/>
@@ -30,12 +30,12 @@ import ro.webdata.parser.xml.lido.common.PrintMessages;
  *
  */
 public class TitleWrap {
-	private ArrayList<TitleSet> titleSet;
+	private List<TitleSet> titleSet;
 	private PrintMessages printMessages = new PrintMessages();
 
 	public TitleWrap() {}
 
-	public TitleWrap(ArrayList<TitleSet> titleSet) {
+	public TitleWrap(List<TitleSet> titleSet) {
 		setTitleSet(titleSet);
 
 		if (titleSet == null || titleSet.isEmpty()) {
@@ -43,11 +43,11 @@ public class TitleWrap {
 		}
 	}
 
-	public ArrayList<TitleSet> getTitleSet() {
+	public List<TitleSet> getTitleSet() {
 		return titleSet;
 	}
 
-	public void setTitleSet(ArrayList<TitleSet> titleSet) {
+	public void setTitleSet(List<TitleSet> titleSet) {
 		this.titleSet = titleSet;
 	}
 }

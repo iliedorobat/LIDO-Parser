@@ -1,18 +1,19 @@
 package ro.webdata.parser.xml.lido.core.complex.legalBodyRefComplexType;
 
-import ro.webdata.parser.xml.lido.core.leaf.legalBodyID.LegalBodyIDDAO;
-import ro.webdata.parser.xml.lido.core.leaf.legalBodyName.LegalBodyNameDAO;
-import ro.webdata.parser.xml.lido.core.leaf.legalBodyWeblink.LegalBodyWeblinkDAO;
-import ro.webdata.parser.xml.lido.core.leaf.legalBodyID.LegalBodyIDDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.legalBodyName.LegalBodyNameDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.legalBodyWeblink.LegalBodyWeblinkDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.legalBodyID.LegalBodyID;
-import ro.webdata.parser.xml.lido.core.leaf.legalBodyName.LegalBodyName;
-import ro.webdata.parser.xml.lido.core.leaf.legalBodyWeblink.LegalBodyWeblink;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import ro.webdata.parser.xml.lido.core.leaf.legalBodyID.LegalBodyID;
+import ro.webdata.parser.xml.lido.core.leaf.legalBodyID.LegalBodyIDDAO;
+import ro.webdata.parser.xml.lido.core.leaf.legalBodyID.LegalBodyIDDAOImpl;
+import ro.webdata.parser.xml.lido.core.leaf.legalBodyName.LegalBodyName;
+import ro.webdata.parser.xml.lido.core.leaf.legalBodyName.LegalBodyNameDAO;
+import ro.webdata.parser.xml.lido.core.leaf.legalBodyName.LegalBodyNameDAOImpl;
+import ro.webdata.parser.xml.lido.core.leaf.legalBodyWeblink.LegalBodyWeblink;
+import ro.webdata.parser.xml.lido.core.leaf.legalBodyWeblink.LegalBodyWeblinkDAO;
+import ro.webdata.parser.xml.lido.core.leaf.legalBodyWeblink.LegalBodyWeblinkDAOImpl;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class LegalBodyRefComplexTypeDAOImpl implements LegalBodyRefComplexTypeDAO {
     private static LegalBodyIDDAO legalBodyIDParser = new LegalBodyIDDAOImpl();
@@ -20,9 +21,9 @@ public class LegalBodyRefComplexTypeDAOImpl implements LegalBodyRefComplexTypeDA
     private static LegalBodyWeblinkDAO legalBodyWeblinkParser = new LegalBodyWeblinkDAOImpl();
 
     public LegalBodyRefComplexType getLegalBodyRefComplexType(Node node) {
-        ArrayList<LegalBodyID> legalBodyIDList = new ArrayList<LegalBodyID>();
-        ArrayList<LegalBodyName> legalBodyNameList = new ArrayList<LegalBodyName>();
-        ArrayList<LegalBodyWeblink> legalBodyWeblinkList = new ArrayList<LegalBodyWeblink>();
+        List<LegalBodyID> legalBodyIDList = new ArrayList<LegalBodyID>();
+        List<LegalBodyName> legalBodyNameList = new ArrayList<LegalBodyName>();
+        List<LegalBodyWeblink> legalBodyWeblinkList = new ArrayList<LegalBodyWeblink>();
 
         NodeList childNodeList = node.getChildNodes();
         for (int i = 0; i < childNodeList.getLength(); i++) {

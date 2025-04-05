@@ -1,10 +1,10 @@
 package ro.webdata.parser.xml.lido.core.wrap.displayStateEditionWrap;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.leaf.displayEdition.DisplayEdition;
 import ro.webdata.parser.xml.lido.core.leaf.displayState.DisplayState;
 import ro.webdata.parser.xml.lido.core.leaf.sourceStateEdition.SourceStateEdition;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../../javadoc.css"/>
  * <div class="lido">
@@ -45,40 +45,40 @@ import ro.webdata.parser.xml.lido.core.leaf.sourceStateEdition.SourceStateEditio
  *
  */
 public class DisplayStateEditionWrap {
-	private ArrayList<DisplayState> displayState;
-	private ArrayList<DisplayEdition> displayEdition;
-	private ArrayList<SourceStateEdition> sourceStateEdition;
+	private List<DisplayState> displayState;
+	private List<DisplayEdition> displayEdition;
+	private List<SourceStateEdition> sourceStateEdition;
 
 	public DisplayStateEditionWrap() {}
 
-	public DisplayStateEditionWrap(ArrayList<DisplayState> displayState, ArrayList<DisplayEdition> displayEdition,
-			ArrayList<SourceStateEdition> sourceStateEdition) {
+	public DisplayStateEditionWrap(List<DisplayState> displayState, List<DisplayEdition> displayEdition,
+			List<SourceStateEdition> sourceStateEdition) {
 		setDisplayState(displayState);
 		setDisplayEdition(displayEdition);
 		setSourceStateEdition(sourceStateEdition);
 	}
 
-	public ArrayList<DisplayState> getDisplayState() {
+	public List<DisplayState> getDisplayState() {
 		return displayState;
 	}
 
-	public void setDisplayState(ArrayList<DisplayState> displayState) {
+	public void setDisplayState(List<DisplayState> displayState) {
 		this.displayState = displayState;
 	}
 
-	public ArrayList<DisplayEdition> getDisplayEdition() {
+	public List<DisplayEdition> getDisplayEdition() {
 		return displayEdition;
 	}
 
-	public void setDisplayEdition(ArrayList<DisplayEdition> displayEdition) {
+	public void setDisplayEdition(List<DisplayEdition> displayEdition) {
 		this.displayEdition = displayEdition;
 	}
 
-	public ArrayList<SourceStateEdition> getSourceStateEdition() {
+	public List<SourceStateEdition> getSourceStateEdition() {
 		return sourceStateEdition;
 	}
 
-	public void setSourceStateEdition(ArrayList<SourceStateEdition> sourceStateEdition) {
+	public void setSourceStateEdition(List<SourceStateEdition> sourceStateEdition) {
 		this.sourceStateEdition = sourceStateEdition;
 	}
 }

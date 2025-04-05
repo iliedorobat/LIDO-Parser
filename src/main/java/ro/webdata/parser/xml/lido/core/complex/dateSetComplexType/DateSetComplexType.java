@@ -1,9 +1,9 @@
 package ro.webdata.parser.xml.lido.core.complex.dateSetComplexType;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.leaf.date.Date;
 import ro.webdata.parser.xml.lido.core.leaf.displayDate.DisplayDate;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
  * <div class="lido">
@@ -35,21 +35,21 @@ import ro.webdata.parser.xml.lido.core.leaf.displayDate.DisplayDate;
  *
  */
 public class DateSetComplexType {
-	private ArrayList<DisplayDate> displayDate;
+	private List<DisplayDate> displayDate;
 	private Date date;
 
 	public DateSetComplexType() {}
 
-	public DateSetComplexType(ArrayList<DisplayDate> displayDate, Date date) {
+	public DateSetComplexType(List<DisplayDate> displayDate, Date date) {
 		setDisplayDate(displayDate);
 		setDate(date);
 	}
 
-	public ArrayList<DisplayDate> getDisplayDate() {
+	public List<DisplayDate> getDisplayDate() {
 		return displayDate;
 	}
 
-	public void setDisplayDate(ArrayList<DisplayDate> displayDate) {
+	public void setDisplayDate(List<DisplayDate> displayDate) {
 		this.displayDate = displayDate;
 	}
 

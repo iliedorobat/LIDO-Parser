@@ -1,9 +1,9 @@
 package ro.webdata.parser.xml.lido.core.complex.conceptComplexType;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.leaf.conceptID.ConceptID;
 import ro.webdata.parser.xml.lido.core.leaf.term.Term;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
  * <div class="lido">
@@ -34,29 +34,29 @@ import ro.webdata.parser.xml.lido.core.leaf.term.Term;
  *
  */
 public class ConceptComplexType {
-	private ArrayList<ConceptID> conceptID;
-	private ArrayList<Term> term;
+	private List<ConceptID> conceptID;
+	private List<Term> term;
 
 	public ConceptComplexType() {}
 
-	public ConceptComplexType(ArrayList<ConceptID> conceptID, ArrayList<Term> term) {
+	public ConceptComplexType(List<ConceptID> conceptID, List<Term> term) {
 		setConceptID(conceptID);
 		setTerm(term);
 	}
 
-	public ArrayList<ConceptID> getConceptID() {
+	public List<ConceptID> getConceptID() {
 		return conceptID;
 	}
 
-	public void setConceptID(ArrayList<ConceptID> conceptID) {
+	public void setConceptID(List<ConceptID> conceptID) {
 		this.conceptID = conceptID;
 	}
 
-	public ArrayList<Term> getTerm() {
+	public List<Term> getTerm() {
 		return term;
 	}
 
-	public void setTerm(ArrayList<Term> term) {
+	public void setTerm(List<Term> term) {
 		this.term = term;
 	}
 }

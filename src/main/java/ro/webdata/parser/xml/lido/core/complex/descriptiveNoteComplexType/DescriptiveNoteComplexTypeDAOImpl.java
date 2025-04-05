@@ -1,22 +1,23 @@
 package ro.webdata.parser.xml.lido.core.complex.descriptiveNoteComplexType;
 
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import ro.webdata.echo.commons.graph.Graph;
-import ro.webdata.parser.xml.lido.core.leaf.descriptiveNoteID.DescriptiveNoteIDDAO;
-import ro.webdata.parser.xml.lido.core.leaf.descriptiveNoteValue.DescriptiveNoteValueDAO;
-import ro.webdata.parser.xml.lido.core.leaf.sourceDescriptiveNote.SourceDescriptiveNoteDAO;
-import ro.webdata.parser.xml.lido.core.leaf.descriptiveNoteID.DescriptiveNoteIDDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.descriptiveNoteValue.DescriptiveNoteValueDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.sourceDescriptiveNote.SourceDescriptiveNoteDAOImpl;
 import ro.webdata.parser.xml.lido.core.attribute.LidoSortOrder;
 import ro.webdata.parser.xml.lido.core.attribute.LidoType;
 import ro.webdata.parser.xml.lido.core.leaf.descriptiveNoteID.DescriptiveNoteID;
+import ro.webdata.parser.xml.lido.core.leaf.descriptiveNoteID.DescriptiveNoteIDDAO;
+import ro.webdata.parser.xml.lido.core.leaf.descriptiveNoteID.DescriptiveNoteIDDAOImpl;
 import ro.webdata.parser.xml.lido.core.leaf.descriptiveNoteValue.DescriptiveNoteValue;
+import ro.webdata.parser.xml.lido.core.leaf.descriptiveNoteValue.DescriptiveNoteValueDAO;
+import ro.webdata.parser.xml.lido.core.leaf.descriptiveNoteValue.DescriptiveNoteValueDAOImpl;
 import ro.webdata.parser.xml.lido.core.leaf.sourceDescriptiveNote.SourceDescriptiveNote;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
+import ro.webdata.parser.xml.lido.core.leaf.sourceDescriptiveNote.SourceDescriptiveNoteDAO;
+import ro.webdata.parser.xml.lido.core.leaf.sourceDescriptiveNote.SourceDescriptiveNoteDAOImpl;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class DescriptiveNoteComplexTypeDAOImpl implements DescriptiveNoteComplexTypeDAO {
     private static DescriptiveNoteIDDAO descriptiveNoteIDParser = new DescriptiveNoteIDDAOImpl();
@@ -24,10 +25,10 @@ public class DescriptiveNoteComplexTypeDAOImpl implements DescriptiveNoteComplex
     private static SourceDescriptiveNoteDAO sourceDescriptiveNoteParser = new SourceDescriptiveNoteDAOImpl();
 
     public DescriptiveNoteComplexType getDescriptiveNoteComplexType(Node node) {
-        ArrayList<DescriptiveNoteID> descriptiveNoteIDList = new ArrayList<DescriptiveNoteID>();
-        ArrayList<DescriptiveNoteValue> descriptiveNoteValueList = new ArrayList<DescriptiveNoteValue>();
-        ArrayList<SourceDescriptiveNote> sourceDescriptiveNoteList = new ArrayList<SourceDescriptiveNote>();
-        HashMap<String, String> attributes = Graph.getAttributes(node);
+        List<DescriptiveNoteID> descriptiveNoteIDList = new ArrayList<DescriptiveNoteID>();
+        List<DescriptiveNoteValue> descriptiveNoteValueList = new ArrayList<DescriptiveNoteValue>();
+        List<SourceDescriptiveNote> sourceDescriptiveNoteList = new ArrayList<SourceDescriptiveNote>();
+        Map<String, String> attributes = Graph.getAttributes(node);
 
         NodeList childNodeList = node.getChildNodes();
         for (int i = 0; i < childNodeList.getLength(); i++) {

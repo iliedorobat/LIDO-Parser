@@ -1,8 +1,8 @@
 package ro.webdata.parser.xml.lido.core.wrap.repositoryWrap;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.set.repositorySet.RepositorySet;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../../javadoc.css"/>
  * <div class="lido">
@@ -24,19 +24,19 @@ import ro.webdata.parser.xml.lido.core.set.repositorySet.RepositorySet;
  *
  */
 public class RepositoryWrap {
-	private ArrayList<RepositorySet> repositorySet;
+	private List<RepositorySet> repositorySet;
 
 	public RepositoryWrap() {}
 
-	public RepositoryWrap(ArrayList<RepositorySet> repositorySet) {
+	public RepositoryWrap(List<RepositorySet> repositorySet) {
 		setRepositorySet(repositorySet);
 	}
 
-	public ArrayList<RepositorySet> getRepositorySet() {
+	public List<RepositorySet> getRepositorySet() {
 		return repositorySet;
 	}
 
-	public void setRepositorySet(ArrayList<RepositorySet> repositorySet) {
+	public void setRepositorySet(List<RepositorySet> repositorySet) {
 		this.repositorySet = repositorySet;
 	}
 }

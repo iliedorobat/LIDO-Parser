@@ -1,22 +1,23 @@
 package ro.webdata.parser.xml.lido.core.complex.placeSetComplexType;
 
-import ro.webdata.parser.xml.lido.core.leaf.displayPlace.DisplayPlaceDAO;
-import ro.webdata.parser.xml.lido.core.leaf.place.PlaceDAO;
-import ro.webdata.parser.xml.lido.core.leaf.displayPlace.DisplayPlaceDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.place.PlaceDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.displayPlace.DisplayPlace;
-import ro.webdata.parser.xml.lido.core.leaf.place.Place;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import ro.webdata.parser.xml.lido.core.leaf.displayPlace.DisplayPlace;
+import ro.webdata.parser.xml.lido.core.leaf.displayPlace.DisplayPlaceDAO;
+import ro.webdata.parser.xml.lido.core.leaf.displayPlace.DisplayPlaceDAOImpl;
+import ro.webdata.parser.xml.lido.core.leaf.place.Place;
+import ro.webdata.parser.xml.lido.core.leaf.place.PlaceDAO;
+import ro.webdata.parser.xml.lido.core.leaf.place.PlaceDAOImpl;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PlaceSetComplexTypeDAOImpl implements PlaceSetComplexTypeDAO {
     private static DisplayPlaceDAO displayPlaceParser = new DisplayPlaceDAOImpl();
     private static PlaceDAO placeParser = new PlaceDAOImpl();
 
     public PlaceSetComplexType getPlaceSetComplexType(Node node) {
-        ArrayList<DisplayPlace> displayPlaceList = new ArrayList<DisplayPlace>();
+        List<DisplayPlace> displayPlaceList = new ArrayList<DisplayPlace>();
         Place place = null;
 
         NodeList childNodeList = node.getChildNodes();

@@ -1,12 +1,12 @@
 package ro.webdata.parser.xml.lido.core.complex.actorInRoleComplexType;
 
-import java.util.ArrayList;
-
+import ro.webdata.parser.xml.lido.common.PrintMessages;
 import ro.webdata.parser.xml.lido.core.leaf.actor.Actor;
 import ro.webdata.parser.xml.lido.core.leaf.attributionQualifierActor.AttributionQualifierActor;
 import ro.webdata.parser.xml.lido.core.leaf.extentActor.ExtentActor;
 import ro.webdata.parser.xml.lido.core.leaf.roleActor.RoleActor;
-import ro.webdata.parser.xml.lido.common.PrintMessages;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
  * <div class="lido">
@@ -49,15 +49,15 @@ import ro.webdata.parser.xml.lido.common.PrintMessages;
  */
 public class ActorInRoleComplexType {
 	private Actor actor;
-	private ArrayList<RoleActor> roleActor;
-	private ArrayList<AttributionQualifierActor> attributionQualifierActor;
-	private ArrayList<ExtentActor> extentActor;
+	private List<RoleActor> roleActor;
+	private List<AttributionQualifierActor> attributionQualifierActor;
+	private List<ExtentActor> extentActor;
 	private PrintMessages printMessages = new PrintMessages();
 
 	public ActorInRoleComplexType() {}
 
-	public ActorInRoleComplexType(Actor actor, ArrayList<RoleActor> roleActor,
-			ArrayList<AttributionQualifierActor> attributionQualifierActor, ArrayList<ExtentActor> extentActor) {
+	public ActorInRoleComplexType(Actor actor, List<RoleActor> roleActor,
+			List<AttributionQualifierActor> attributionQualifierActor, List<ExtentActor> extentActor) {
 		setActor(actor);
 		setAttributionQualifierActor(attributionQualifierActor);
 		setExtentActor(extentActor);
@@ -76,27 +76,27 @@ public class ActorInRoleComplexType {
 		this.actor = actor;
 	}
 
-	public ArrayList<RoleActor> getRoleActor() {
+	public List<RoleActor> getRoleActor() {
 		return roleActor;
 	}
 
-	public void setRoleActor(ArrayList<RoleActor> roleActor) {
+	public void setRoleActor(List<RoleActor> roleActor) {
 		this.roleActor = roleActor;
 	}
 
-	public ArrayList<AttributionQualifierActor> getAttributionQualifierActor() {
+	public List<AttributionQualifierActor> getAttributionQualifierActor() {
 		return attributionQualifierActor;
 	}
 
-	public void setAttributionQualifierActor(ArrayList<AttributionQualifierActor> attributionQualifierActor) {
+	public void setAttributionQualifierActor(List<AttributionQualifierActor> attributionQualifierActor) {
 		this.attributionQualifierActor = attributionQualifierActor;
 	}
 
-	public ArrayList<ExtentActor> getExtentActor() {
+	public List<ExtentActor> getExtentActor() {
 		return extentActor;
 	}
 
-	public void setExtentActor(ArrayList<ExtentActor> extentActor) {
+	public void setExtentActor(List<ExtentActor> extentActor) {
 		this.extentActor = extentActor;
 	}
 }

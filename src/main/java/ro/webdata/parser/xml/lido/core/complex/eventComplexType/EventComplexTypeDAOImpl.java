@@ -2,12 +2,6 @@ package ro.webdata.parser.xml.lido.core.complex.eventComplexType;
 
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import ro.webdata.parser.xml.lido.core.set.eventDescriptionSet.EventDescriptionSetDAO;
-import ro.webdata.parser.xml.lido.core.set.relatedEventSet.RelatedEventSetDAO;
-import ro.webdata.parser.xml.lido.core.set.eventDescriptionSet.EventDescriptionSetDAOImpl;
-import ro.webdata.parser.xml.lido.core.set.relatedEventSet.RelatedEventSetDAOImpl;
-import ro.webdata.parser.xml.lido.core.set.eventDescriptionSet.EventDescriptionSet;
-import ro.webdata.parser.xml.lido.core.set.relatedEventSet.RelatedEventSet;
 import ro.webdata.parser.xml.lido.core.leaf.culture.Culture;
 import ro.webdata.parser.xml.lido.core.leaf.culture.CultureDAO;
 import ro.webdata.parser.xml.lido.core.leaf.culture.CultureDAOImpl;
@@ -44,8 +38,15 @@ import ro.webdata.parser.xml.lido.core.leaf.roleInEvent.RoleInEventDAOImpl;
 import ro.webdata.parser.xml.lido.core.leaf.thingPresent.ThingPresent;
 import ro.webdata.parser.xml.lido.core.leaf.thingPresent.ThingPresentDAO;
 import ro.webdata.parser.xml.lido.core.leaf.thingPresent.ThingPresentDAOImpl;
+import ro.webdata.parser.xml.lido.core.set.eventDescriptionSet.EventDescriptionSet;
+import ro.webdata.parser.xml.lido.core.set.eventDescriptionSet.EventDescriptionSetDAO;
+import ro.webdata.parser.xml.lido.core.set.eventDescriptionSet.EventDescriptionSetDAOImpl;
+import ro.webdata.parser.xml.lido.core.set.relatedEventSet.RelatedEventSet;
+import ro.webdata.parser.xml.lido.core.set.relatedEventSet.RelatedEventSetDAO;
+import ro.webdata.parser.xml.lido.core.set.relatedEventSet.RelatedEventSetDAOImpl;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class EventComplexTypeDAOImpl implements EventComplexTypeDAO {
     private static EventIDDAO eventIDParser = new EventIDDAOImpl();
@@ -64,20 +65,20 @@ public class EventComplexTypeDAOImpl implements EventComplexTypeDAO {
     private static EventDescriptionSetDAO eventDescriptionSetParser = new EventDescriptionSetDAOImpl();
 
     public EventComplexType getEventComplexType(Node node) {
-        ArrayList<EventID> eventIDList = new ArrayList<EventID>();
+        List<EventID> eventIDList = new ArrayList<EventID>();
         EventType eventType = null;
-        ArrayList<RoleInEvent> roleInEventList = new ArrayList<RoleInEvent>();
-        ArrayList<EventName> eventNameList = new ArrayList<EventName>();
-        ArrayList<EventActor> eventActorList = new ArrayList<EventActor>();
-        ArrayList<Culture> cultureList = new ArrayList<Culture>();
+        List<RoleInEvent> roleInEventList = new ArrayList<RoleInEvent>();
+        List<EventName> eventNameList = new ArrayList<EventName>();
+        List<EventActor> eventActorList = new ArrayList<EventActor>();
+        List<Culture> cultureList = new ArrayList<Culture>();
         EventDate eventDate = null;
-        ArrayList<PeriodName> periodNameList = new ArrayList<PeriodName>();
-        ArrayList<EventPlace> eventPlaceList = new ArrayList<EventPlace>();
-        ArrayList<EventMethod> eventMethodList = new ArrayList<EventMethod>();
-        ArrayList<EventMaterialsTech> eventMaterialsTechList = new ArrayList<EventMaterialsTech>();
-        ArrayList<ThingPresent> thingPresentList = new ArrayList<ThingPresent>();
-        ArrayList<RelatedEventSet> relatedEventSetList = new ArrayList<RelatedEventSet>();
-        ArrayList<EventDescriptionSet> eventDescriptionSetList = new ArrayList<EventDescriptionSet>();
+        List<PeriodName> periodNameList = new ArrayList<PeriodName>();
+        List<EventPlace> eventPlaceList = new ArrayList<EventPlace>();
+        List<EventMethod> eventMethodList = new ArrayList<EventMethod>();
+        List<EventMaterialsTech> eventMaterialsTechList = new ArrayList<EventMaterialsTech>();
+        List<ThingPresent> thingPresentList = new ArrayList<ThingPresent>();
+        List<RelatedEventSet> relatedEventSetList = new ArrayList<RelatedEventSet>();
+        List<EventDescriptionSet> eventDescriptionSetList = new ArrayList<EventDescriptionSet>();
 
         NodeList childNodeList = node.getChildNodes();
         for (int i = 0; i < childNodeList.getLength(); i++) {

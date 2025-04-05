@@ -1,10 +1,10 @@
 package ro.webdata.parser.xml.lido.core.complex.materialsTechComplexType;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.leaf.extentMaterialsTech.ExtentMaterialsTech;
 import ro.webdata.parser.xml.lido.core.leaf.sourceMaterialsTech.SourceMaterialsTech;
 import ro.webdata.parser.xml.lido.core.leaf.termMaterialsTech.TermMaterialsTech;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
  * <div class="lido">
@@ -39,40 +39,40 @@ import ro.webdata.parser.xml.lido.core.leaf.termMaterialsTech.TermMaterialsTech;
  *
  */
 public class MaterialsTechComplexType {
-	private ArrayList<TermMaterialsTech> termMaterialsTech;
-	private ArrayList<ExtentMaterialsTech> extentMaterialsTech;
-	private ArrayList<SourceMaterialsTech> sourceMaterialsTech;
+	private List<TermMaterialsTech> termMaterialsTech;
+	private List<ExtentMaterialsTech> extentMaterialsTech;
+	private List<SourceMaterialsTech> sourceMaterialsTech;
 
 	public MaterialsTechComplexType() {}
 
-	public MaterialsTechComplexType(ArrayList<TermMaterialsTech> termMaterialsTech, ArrayList<ExtentMaterialsTech> extentMaterialsTech,
-			ArrayList<SourceMaterialsTech> sourceMaterialsTech) {
+	public MaterialsTechComplexType(List<TermMaterialsTech> termMaterialsTech, List<ExtentMaterialsTech> extentMaterialsTech,
+			List<SourceMaterialsTech> sourceMaterialsTech) {
 		setExtentMaterialsTech(extentMaterialsTech);
 		setSourceMaterialsTech(sourceMaterialsTech);
 		setTermMaterialsTech(termMaterialsTech);
 	}
 
-	public ArrayList<TermMaterialsTech> getTermMaterialsTech() {
+	public List<TermMaterialsTech> getTermMaterialsTech() {
 		return termMaterialsTech;
 	}
 
-	public void setTermMaterialsTech(ArrayList<TermMaterialsTech> termMaterialsTech) {
+	public void setTermMaterialsTech(List<TermMaterialsTech> termMaterialsTech) {
 		this.termMaterialsTech = termMaterialsTech;
 	}
 
-	public ArrayList<ExtentMaterialsTech> getExtentMaterialsTech() {
+	public List<ExtentMaterialsTech> getExtentMaterialsTech() {
 		return extentMaterialsTech;
 	}
 
-	public void setExtentMaterialsTech(ArrayList<ExtentMaterialsTech> extentMaterialsTech) {
+	public void setExtentMaterialsTech(List<ExtentMaterialsTech> extentMaterialsTech) {
 		this.extentMaterialsTech = extentMaterialsTech;
 	}
 
-	public ArrayList<SourceMaterialsTech> getSourceMaterialsTech() {
+	public List<SourceMaterialsTech> getSourceMaterialsTech() {
 		return sourceMaterialsTech;
 	}
 
-	public void setSourceMaterialsTech(ArrayList<SourceMaterialsTech> sourceMaterialsTech) {
+	public void setSourceMaterialsTech(List<SourceMaterialsTech> sourceMaterialsTech) {
 		this.sourceMaterialsTech = sourceMaterialsTech;
 	}
 }

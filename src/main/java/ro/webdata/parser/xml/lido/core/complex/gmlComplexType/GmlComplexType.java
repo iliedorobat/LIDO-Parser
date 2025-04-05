@@ -1,10 +1,10 @@
 package ro.webdata.parser.xml.lido.core.complex.gmlComplexType;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.leaf.gml.GmlLineString;
 import ro.webdata.parser.xml.lido.core.leaf.gml.GmlPoint;
 import ro.webdata.parser.xml.lido.core.leaf.gml.GmlPolygon;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
  * <div class="lido">
@@ -26,39 +26,39 @@ import ro.webdata.parser.xml.lido.core.leaf.gml.GmlPolygon;
  *
  */
 public class GmlComplexType {
-	private ArrayList<GmlPoint> point;
-	private ArrayList<GmlLineString> lineString;
-	private ArrayList<GmlPolygon> polygon;
+	private List<GmlPoint> point;
+	private List<GmlLineString> lineString;
+	private List<GmlPolygon> polygon;
 
 	public GmlComplexType() {}
 
-	public GmlComplexType(ArrayList<GmlPoint> point, ArrayList<GmlLineString> lineString, ArrayList<GmlPolygon> polygon) {
+	public GmlComplexType(List<GmlPoint> point, List<GmlLineString> lineString, List<GmlPolygon> polygon) {
 		setPoint(point);
 		setLineString(lineString);
 		setPolygon(polygon);
 	}
 
-	public ArrayList<GmlPoint> getPoint() {
+	public List<GmlPoint> getPoint() {
 		return point;
 	}
 
-	public void setPoint(ArrayList<GmlPoint> point) {
+	public void setPoint(List<GmlPoint> point) {
 		this.point = point;
 	}
 
-	public ArrayList<GmlLineString> getLineString() {
+	public List<GmlLineString> getLineString() {
 		return lineString;
 	}
 
-	public void setLineString(ArrayList<GmlLineString> lineString) {
+	public void setLineString(List<GmlLineString> lineString) {
 		this.lineString = lineString;
 	}
 
-	public ArrayList<GmlPolygon> getPolygon() {
+	public List<GmlPolygon> getPolygon() {
 		return polygon;
 	}
 
-	public void setPolygon(ArrayList<GmlPolygon> polygon) {
+	public void setPolygon(List<GmlPolygon> polygon) {
 		this.polygon = polygon;
 	}
 }

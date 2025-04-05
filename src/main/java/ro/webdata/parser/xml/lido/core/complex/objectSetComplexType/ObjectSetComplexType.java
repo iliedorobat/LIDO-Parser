@@ -1,9 +1,9 @@
 package ro.webdata.parser.xml.lido.core.complex.objectSetComplexType;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.leaf.displayObject.DisplayObject;
 import ro.webdata.parser.xml.lido.core.leaf.object.Object;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
  * <div class="lido">
@@ -29,21 +29,21 @@ import ro.webdata.parser.xml.lido.core.leaf.object.Object;
  *
  */
 public class ObjectSetComplexType {
-	private ArrayList<DisplayObject> displayObject;
+	private List<DisplayObject> displayObject;
 	private Object object;
 
 	public ObjectSetComplexType() {}
 
-	public ObjectSetComplexType(ArrayList<DisplayObject> displayObject, Object object) {
+	public ObjectSetComplexType(List<DisplayObject> displayObject, Object object) {
 		setDisplayObject(displayObject);
 		setObject(object);
 	}
 
-	public ArrayList<DisplayObject> getDisplayObject() {
+	public List<DisplayObject> getDisplayObject() {
 		return displayObject;
 	}
 
-	public void setDisplayObject(ArrayList<DisplayObject> displayObject) {
+	public void setDisplayObject(List<DisplayObject> displayObject) {
 		this.displayObject = displayObject;
 	}
 

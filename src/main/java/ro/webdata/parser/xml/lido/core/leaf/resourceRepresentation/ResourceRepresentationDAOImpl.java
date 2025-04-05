@@ -1,18 +1,19 @@
 package ro.webdata.parser.xml.lido.core.leaf.resourceRepresentation;
 
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import ro.webdata.echo.commons.graph.Graph;
-import ro.webdata.parser.xml.lido.core.leaf.linkResource.LinkResourceDAO;
-import ro.webdata.parser.xml.lido.core.set.resourceMeasurementsSet.ResourceMeasurementsSetDAO;
-import ro.webdata.parser.xml.lido.core.leaf.linkResource.LinkResourceDAOImpl;
-import ro.webdata.parser.xml.lido.core.set.resourceMeasurementsSet.ResourceMeasurementsSetDAOImpl;
 import ro.webdata.parser.xml.lido.core.attribute.LidoType;
 import ro.webdata.parser.xml.lido.core.complex.measurementsSetComplexType.MeasurementsSetComplexType;
 import ro.webdata.parser.xml.lido.core.leaf.linkResource.LinkResource;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
+import ro.webdata.parser.xml.lido.core.leaf.linkResource.LinkResourceDAO;
+import ro.webdata.parser.xml.lido.core.leaf.linkResource.LinkResourceDAOImpl;
+import ro.webdata.parser.xml.lido.core.set.resourceMeasurementsSet.ResourceMeasurementsSetDAO;
+import ro.webdata.parser.xml.lido.core.set.resourceMeasurementsSet.ResourceMeasurementsSetDAOImpl;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class ResourceRepresentationDAOImpl implements ResourceRepresentationDAO {
     private static LinkResourceDAO linkParser = new LinkResourceDAOImpl();
@@ -21,8 +22,8 @@ public class ResourceRepresentationDAOImpl implements ResourceRepresentationDAO 
     //TODO: create the ResourceRepresentationCompelexTypeDAO (artificial class) to extend the class
     public ResourceRepresentation getResourceRepresentation(Node node) {
         LinkResource linkResource = null;
-        ArrayList<MeasurementsSetComplexType> resourceMeasurementsSet = new ArrayList<MeasurementsSetComplexType>();
-        HashMap<String, String> attributes = Graph.getAttributes(node);
+        List<MeasurementsSetComplexType> resourceMeasurementsSet = new ArrayList<MeasurementsSetComplexType>();
+        Map<String, String> attributes = Graph.getAttributes(node);
 
         NodeList childNodeList = node.getChildNodes();
         for (int i = 0; i < childNodeList.getLength(); i++) {

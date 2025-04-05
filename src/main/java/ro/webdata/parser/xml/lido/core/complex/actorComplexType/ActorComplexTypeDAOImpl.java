@@ -1,27 +1,28 @@
 package ro.webdata.parser.xml.lido.core.complex.actorComplexType;
 
-import ro.webdata.echo.commons.graph.Graph;
-import ro.webdata.parser.xml.lido.core.leaf.actorID.ActorIDDAO;
-import ro.webdata.parser.xml.lido.core.leaf.genderActor.GenderActorDAO;
-import ro.webdata.parser.xml.lido.core.leaf.nationalityActor.NationalityActorDAO;
-import ro.webdata.parser.xml.lido.core.leaf.vitalDatesActor.VitalDatesActorDAO;
-import ro.webdata.parser.xml.lido.core.set.nameActorSet.NameActorSetDAO;
-import ro.webdata.parser.xml.lido.core.leaf.actorID.ActorIDDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.genderActor.GenderActorDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.nationalityActor.NationalityActorDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.vitalDatesActor.VitalDatesActorDAOImpl;
-import ro.webdata.parser.xml.lido.core.set.nameActorSet.NameActorSetDAOImpl;
-import ro.webdata.parser.xml.lido.core.attribute.LidoType;
-import ro.webdata.parser.xml.lido.core.leaf.actorID.ActorID;
-import ro.webdata.parser.xml.lido.core.leaf.genderActor.GenderActor;
-import ro.webdata.parser.xml.lido.core.leaf.nationalityActor.NationalityActor;
-import ro.webdata.parser.xml.lido.core.leaf.vitalDatesActor.VitalDatesActor;
-import ro.webdata.parser.xml.lido.core.set.nameActorSet.NameActorSet;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import ro.webdata.echo.commons.graph.Graph;
+import ro.webdata.parser.xml.lido.core.attribute.LidoType;
+import ro.webdata.parser.xml.lido.core.leaf.actorID.ActorID;
+import ro.webdata.parser.xml.lido.core.leaf.actorID.ActorIDDAO;
+import ro.webdata.parser.xml.lido.core.leaf.actorID.ActorIDDAOImpl;
+import ro.webdata.parser.xml.lido.core.leaf.genderActor.GenderActor;
+import ro.webdata.parser.xml.lido.core.leaf.genderActor.GenderActorDAO;
+import ro.webdata.parser.xml.lido.core.leaf.genderActor.GenderActorDAOImpl;
+import ro.webdata.parser.xml.lido.core.leaf.nationalityActor.NationalityActor;
+import ro.webdata.parser.xml.lido.core.leaf.nationalityActor.NationalityActorDAO;
+import ro.webdata.parser.xml.lido.core.leaf.nationalityActor.NationalityActorDAOImpl;
+import ro.webdata.parser.xml.lido.core.leaf.vitalDatesActor.VitalDatesActor;
+import ro.webdata.parser.xml.lido.core.leaf.vitalDatesActor.VitalDatesActorDAO;
+import ro.webdata.parser.xml.lido.core.leaf.vitalDatesActor.VitalDatesActorDAOImpl;
+import ro.webdata.parser.xml.lido.core.set.nameActorSet.NameActorSet;
+import ro.webdata.parser.xml.lido.core.set.nameActorSet.NameActorSetDAO;
+import ro.webdata.parser.xml.lido.core.set.nameActorSet.NameActorSetDAOImpl;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class ActorComplexTypeDAOImpl implements ActorComplexTypeDAO {
     private static ActorIDDAO actorIDParser = new ActorIDDAOImpl();
@@ -31,12 +32,12 @@ public class ActorComplexTypeDAOImpl implements ActorComplexTypeDAO {
     private static GenderActorDAO genderActorParser = new GenderActorDAOImpl();
 
     public ActorComplexType getActorComplexType(Node node) {
-        ArrayList<ActorID> actorIDList = new ArrayList<ActorID>();
-        ArrayList<NameActorSet> nameActorSetList = new ArrayList<NameActorSet>();
-        ArrayList<NationalityActor> nationalityActorList = new ArrayList<NationalityActor>();
+        List<ActorID> actorIDList = new ArrayList<ActorID>();
+        List<NameActorSet> nameActorSetList = new ArrayList<NameActorSet>();
+        List<NationalityActor> nationalityActorList = new ArrayList<NationalityActor>();
         VitalDatesActor vitalDatesActor = null;
-        ArrayList<GenderActor> genderActorList = new ArrayList<GenderActor>();
-        HashMap<String, String> attributes = Graph.getAttributes(node);
+        List<GenderActor> genderActorList = new ArrayList<GenderActor>();
+        Map<String, String> attributes = Graph.getAttributes(node);
 
         NodeList childNodeList = node.getChildNodes();
         for (int i = 0; i < childNodeList.getLength(); i++) {

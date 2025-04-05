@@ -1,22 +1,23 @@
 package ro.webdata.parser.xml.lido.core.complex.dateSetComplexType;
 
-import ro.webdata.parser.xml.lido.core.leaf.date.DateDAO;
-import ro.webdata.parser.xml.lido.core.leaf.displayDate.DisplayDateDAO;
-import ro.webdata.parser.xml.lido.core.leaf.date.DateDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.displayDate.DisplayDateDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.date.Date;
-import ro.webdata.parser.xml.lido.core.leaf.displayDate.DisplayDate;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import ro.webdata.parser.xml.lido.core.leaf.date.Date;
+import ro.webdata.parser.xml.lido.core.leaf.date.DateDAO;
+import ro.webdata.parser.xml.lido.core.leaf.date.DateDAOImpl;
+import ro.webdata.parser.xml.lido.core.leaf.displayDate.DisplayDate;
+import ro.webdata.parser.xml.lido.core.leaf.displayDate.DisplayDateDAO;
+import ro.webdata.parser.xml.lido.core.leaf.displayDate.DisplayDateDAOImpl;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DateSetComplexTypeDAOImpl implements DateSetComplexTypeDAO {
     private static DisplayDateDAO displayDateParser = new DisplayDateDAOImpl();
     private static DateDAO dateParser = new DateDAOImpl();
 
     public DateSetComplexType getDateSetComplexTypeParser(Node node) {
-        ArrayList<DisplayDate> displayDateList = new ArrayList<DisplayDate>();
+        List<DisplayDate> displayDateList = new ArrayList<DisplayDate>();
         Date date = null;
 
         NodeList childNodeList = node.getChildNodes();

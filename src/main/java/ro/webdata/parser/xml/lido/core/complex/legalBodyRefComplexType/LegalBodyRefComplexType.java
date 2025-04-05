@@ -1,10 +1,10 @@
 package ro.webdata.parser.xml.lido.core.complex.legalBodyRefComplexType;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.leaf.legalBodyID.LegalBodyID;
 import ro.webdata.parser.xml.lido.core.leaf.legalBodyName.LegalBodyName;
 import ro.webdata.parser.xml.lido.core.leaf.legalBodyWeblink.LegalBodyWeblink;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
  * <div class="lido">
@@ -33,40 +33,40 @@ import ro.webdata.parser.xml.lido.core.leaf.legalBodyWeblink.LegalBodyWeblink;
  *
  */
 public class LegalBodyRefComplexType {
-	private ArrayList<LegalBodyID> legalBodyID;
-	private ArrayList<LegalBodyName> legalBodyName;
-	private ArrayList<LegalBodyWeblink> legalBodyWeblink;
+	private List<LegalBodyID> legalBodyID;
+	private List<LegalBodyName> legalBodyName;
+	private List<LegalBodyWeblink> legalBodyWeblink;
 
 	public LegalBodyRefComplexType() {}
 
-	public LegalBodyRefComplexType(ArrayList<LegalBodyID> legalBodyID,
-			ArrayList<LegalBodyName> legalBodyName, ArrayList<LegalBodyWeblink> legalBodyWeblink) {
+	public LegalBodyRefComplexType(List<LegalBodyID> legalBodyID,
+			List<LegalBodyName> legalBodyName, List<LegalBodyWeblink> legalBodyWeblink) {
 		setLegalBodyID(legalBodyID);
 		setLegalBodyName(legalBodyName);
 		setLegalBodyWeblink(legalBodyWeblink);
 	}
 
-	public ArrayList<LegalBodyID> getLegalBodyID() {
+	public List<LegalBodyID> getLegalBodyID() {
 		return legalBodyID;
 	}
 
-	public void setLegalBodyID(ArrayList<LegalBodyID> legalBodyID) {
+	public void setLegalBodyID(List<LegalBodyID> legalBodyID) {
 		this.legalBodyID = legalBodyID;
 	}
 
-	public ArrayList<LegalBodyName> getLegalBodyName() {
+	public List<LegalBodyName> getLegalBodyName() {
 		return legalBodyName;
 	}
 
-	public void setLegalBodyName(ArrayList<LegalBodyName> legalBodyName) {
+	public void setLegalBodyName(List<LegalBodyName> legalBodyName) {
 		this.legalBodyName = legalBodyName;
 	}
 
-	public ArrayList<LegalBodyWeblink> getLegalBodyWeblink() {
+	public List<LegalBodyWeblink> getLegalBodyWeblink() {
 		return legalBodyWeblink;
 	}
 
-	public void setLegalBodyWeblink(ArrayList<LegalBodyWeblink> legalBodyWeblink) {
+	public void setLegalBodyWeblink(List<LegalBodyWeblink> legalBodyWeblink) {
 		this.legalBodyWeblink = legalBodyWeblink;
 	}
 }

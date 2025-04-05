@@ -1,9 +1,9 @@
 package ro.webdata.parser.xml.lido.core.complex.materialsTechSetComplexType;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.leaf.displayMaterialsTech.DisplayMaterialsTech;
 import ro.webdata.parser.xml.lido.core.leaf.materialsTech.MaterialsTech;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
  * <div class="lido">
@@ -34,21 +34,21 @@ import ro.webdata.parser.xml.lido.core.leaf.materialsTech.MaterialsTech;
  *
  */
 public class MaterialsTechSetComplexType {
-	private ArrayList<DisplayMaterialsTech> displayMaterialsTech;
+	private List<DisplayMaterialsTech> displayMaterialsTech;
 	private MaterialsTech materialsTech;
 
 	public MaterialsTechSetComplexType() {}
 
-	public MaterialsTechSetComplexType(ArrayList<DisplayMaterialsTech> displayMaterialsTech, MaterialsTech materialsTech) {
+	public MaterialsTechSetComplexType(List<DisplayMaterialsTech> displayMaterialsTech, MaterialsTech materialsTech) {
 		setDisplayMaterialsTech(displayMaterialsTech);
 		setMaterialsTech(materialsTech);
 	}
 
-	public ArrayList<DisplayMaterialsTech> getDisplayMaterialsTech() {
+	public List<DisplayMaterialsTech> getDisplayMaterialsTech() {
 		return displayMaterialsTech;
 	}
 
-	public void setDisplayMaterialsTech(ArrayList<DisplayMaterialsTech> displayMaterialsTech) {
+	public void setDisplayMaterialsTech(List<DisplayMaterialsTech> displayMaterialsTech) {
 		this.displayMaterialsTech = displayMaterialsTech;
 	}
 

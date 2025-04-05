@@ -28,6 +28,8 @@ import ro.webdata.parser.xml.lido.core.attribute.LidoType;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class SubjectComplexTypeDAOImpl implements SubjectComplexTypeDAO {
     private static ExtentSubjectDAO extentSubject = new ExtentSubjectDAOImpl();
@@ -39,14 +41,14 @@ public class SubjectComplexTypeDAOImpl implements SubjectComplexTypeDAO {
     private static SubjectObjectDAO subjectObject = new SubjectObjectDAOImpl();
 
     public SubjectComplexType getSubjectComplexType(Node node) {
-        ArrayList<ExtentSubject> extentSubjectList = new ArrayList<ExtentSubject>();
-        ArrayList<SubjectConcept> subjectConceptList = new ArrayList<SubjectConcept>();
-        ArrayList<SubjectActor> subjectActorList = new ArrayList<SubjectActor>();
-        ArrayList<SubjectDate> subjectDateList = new ArrayList<SubjectDate>();
-        ArrayList<SubjectEvent> subjectEventList = new ArrayList<SubjectEvent>();
-        ArrayList<SubjectPlace> subjectPlaceList = new ArrayList<SubjectPlace>();
-        ArrayList<SubjectObject> subjectObjectList = new ArrayList<SubjectObject>();
-        HashMap<String, String> attributes = Graph.getAttributes(node);
+        List<ExtentSubject> extentSubjectList = new ArrayList<ExtentSubject>();
+        List<SubjectConcept> subjectConceptList = new ArrayList<SubjectConcept>();
+        List<SubjectActor> subjectActorList = new ArrayList<SubjectActor>();
+        List<SubjectDate> subjectDateList = new ArrayList<SubjectDate>();
+        List<SubjectEvent> subjectEventList = new ArrayList<SubjectEvent>();
+        List<SubjectPlace> subjectPlaceList = new ArrayList<SubjectPlace>();
+        List<SubjectObject> subjectObjectList = new ArrayList<SubjectObject>();
+        Map<String, String> attributes = Graph.getAttributes(node);
 
         NodeList childNodeList = node.getChildNodes();
         for (int i = 0; i < childNodeList.getLength(); i++) {

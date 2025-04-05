@@ -1,8 +1,8 @@
 package ro.webdata.parser.xml.lido.core.wrap.rightsWorkWrap;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.set.rightsWorkSet.RightsWorkSet;
+
+import java.util.List;
 
 /**
  * <link rel="stylesheet" type="text/css" href="../../../../javadoc.css"/>
@@ -27,19 +27,19 @@ import ro.webdata.parser.xml.lido.core.set.rightsWorkSet.RightsWorkSet;
  *
  */
 public class RightsWorkWrap {
-	private ArrayList<RightsWorkSet> rightsWorkSet;
+	private List<RightsWorkSet> rightsWorkSet;
 
 	public RightsWorkWrap() {}
 
-	public RightsWorkWrap(ArrayList<RightsWorkSet> rightsWorkSet) {
+	public RightsWorkWrap(List<RightsWorkSet> rightsWorkSet) {
 		setRightsWorkSet(rightsWorkSet);
 	}
 
-	public ArrayList<RightsWorkSet> getRightsWorkSet() {
+	public List<RightsWorkSet> getRightsWorkSet() {
 		return rightsWorkSet;
 	}
 
-	public void setRightsWorkSet(ArrayList<RightsWorkSet> rightsWorkSet) {
+	public void setRightsWorkSet(List<RightsWorkSet> rightsWorkSet) {
 		this.rightsWorkSet = rightsWorkSet;
 	}
 }

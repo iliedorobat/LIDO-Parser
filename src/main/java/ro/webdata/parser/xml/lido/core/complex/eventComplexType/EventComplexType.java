@@ -1,7 +1,6 @@
 package ro.webdata.parser.xml.lido.core.complex.eventComplexType;
 
-import java.util.ArrayList;
-
+import ro.webdata.parser.xml.lido.common.PrintMessages;
 import ro.webdata.parser.xml.lido.core.leaf.culture.Culture;
 import ro.webdata.parser.xml.lido.core.leaf.eventActor.EventActor;
 import ro.webdata.parser.xml.lido.core.leaf.eventDate.EventDate;
@@ -16,7 +15,8 @@ import ro.webdata.parser.xml.lido.core.leaf.roleInEvent.RoleInEvent;
 import ro.webdata.parser.xml.lido.core.leaf.thingPresent.ThingPresent;
 import ro.webdata.parser.xml.lido.core.set.eventDescriptionSet.EventDescriptionSet;
 import ro.webdata.parser.xml.lido.core.set.relatedEventSet.RelatedEventSet;
-import ro.webdata.parser.xml.lido.common.PrintMessages;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
  * <div class="lido">
@@ -114,29 +114,29 @@ import ro.webdata.parser.xml.lido.common.PrintMessages;
  *
  */
 public class EventComplexType {
-	private ArrayList<EventID> eventID;
+	private List<EventID> eventID;
 	private EventType eventType;
-	private ArrayList<RoleInEvent> roleInEvent;
-	private ArrayList<EventName> eventName;
-	private ArrayList<EventActor> eventActor;
-	private ArrayList<Culture> culture;
+	private List<RoleInEvent> roleInEvent;
+	private List<EventName> eventName;
+	private List<EventActor> eventActor;
+	private List<Culture> culture;
 	private EventDate eventDate;
-	private ArrayList<PeriodName> periodName;
-	private ArrayList<EventPlace> eventPlace;
-	private ArrayList<EventMethod> eventMethod;
-	private ArrayList<EventMaterialsTech> eventMaterialsTech;
-	private ArrayList<ThingPresent> thingPresent;
-	private ArrayList<RelatedEventSet> relatedEventSet;
-	private ArrayList<EventDescriptionSet> eventDescriptionSet;
+	private List<PeriodName> periodName;
+	private List<EventPlace> eventPlace;
+	private List<EventMethod> eventMethod;
+	private List<EventMaterialsTech> eventMaterialsTech;
+	private List<ThingPresent> thingPresent;
+	private List<RelatedEventSet> relatedEventSet;
+	private List<EventDescriptionSet> eventDescriptionSet;
 	private PrintMessages printMessages = new PrintMessages();
 
 	public EventComplexType() {}
 
-	public EventComplexType(ArrayList<EventID> eventID, EventType eventType, ArrayList<RoleInEvent> roleInEvent,
-			ArrayList<EventName> eventName, ArrayList<EventActor> eventActor, ArrayList<Culture> culture, EventDate eventDate,
-			ArrayList<PeriodName> periodName, ArrayList<EventPlace> eventPlace, ArrayList<EventMethod> eventMethod,
-			ArrayList<EventMaterialsTech> eventMaterialsTech, ArrayList<ThingPresent> thingPresent,
-			ArrayList<RelatedEventSet> relatedEventSet, ArrayList<EventDescriptionSet> eventDescriptionSet) {
+	public EventComplexType(List<EventID> eventID, EventType eventType, List<RoleInEvent> roleInEvent,
+			List<EventName> eventName, List<EventActor> eventActor, List<Culture> culture, EventDate eventDate,
+			List<PeriodName> periodName, List<EventPlace> eventPlace, List<EventMethod> eventMethod,
+			List<EventMaterialsTech> eventMaterialsTech, List<ThingPresent> thingPresent,
+			List<RelatedEventSet> relatedEventSet, List<EventDescriptionSet> eventDescriptionSet) {
 		setCulture(culture);
 		setEventActor(eventActor);
 		setEventDate(eventDate);
@@ -157,11 +157,11 @@ public class EventComplexType {
 		}
 	}
 
-	public ArrayList<EventID> getEventID() {
+	public List<EventID> getEventID() {
 		return eventID;
 	}
 
-	public void setEventID(ArrayList<EventID> eventID) {
+	public void setEventID(List<EventID> eventID) {
 		this.eventID = eventID;
 	}
 
@@ -173,35 +173,35 @@ public class EventComplexType {
 		this.eventType = eventType;
 	}
 
-	public ArrayList<RoleInEvent> getRoleInEvent() {
+	public List<RoleInEvent> getRoleInEvent() {
 		return roleInEvent;
 	}
 
-	public void setRoleInEvent(ArrayList<RoleInEvent> roleInEvent) {
+	public void setRoleInEvent(List<RoleInEvent> roleInEvent) {
 		this.roleInEvent = roleInEvent;
 	}
 
-	public ArrayList<EventName> getEventName() {
+	public List<EventName> getEventName() {
 		return eventName;
 	}
 
-	public void setEventName(ArrayList<EventName> eventName) {
+	public void setEventName(List<EventName> eventName) {
 		this.eventName = eventName;
 	}
 
-	public ArrayList<EventActor> getEventActor() {
+	public List<EventActor> getEventActor() {
 		return eventActor;
 	}
 
-	public void setEventActor(ArrayList<EventActor> eventActor) {
+	public void setEventActor(List<EventActor> eventActor) {
 		this.eventActor = eventActor;
 	}
 
-	public ArrayList<Culture> getCulture() {
+	public List<Culture> getCulture() {
 		return culture;
 	}
 
-	public void setCulture(ArrayList<Culture> culture) {
+	public void setCulture(List<Culture> culture) {
 		this.culture = culture;
 	}
 
@@ -213,59 +213,59 @@ public class EventComplexType {
 		this.eventDate = eventDate;
 	}
 
-	public ArrayList<PeriodName> getPeriodName() {
+	public List<PeriodName> getPeriodName() {
 		return periodName;
 	}
 
-	public void setPeriodName(ArrayList<PeriodName> periodName) {
+	public void setPeriodName(List<PeriodName> periodName) {
 		this.periodName = periodName;
 	}
 
-	public ArrayList<EventPlace> getEventPlace() {
+	public List<EventPlace> getEventPlace() {
 		return eventPlace;
 	}
 
-	public void setEventPlace(ArrayList<EventPlace> eventPlace) {
+	public void setEventPlace(List<EventPlace> eventPlace) {
 		this.eventPlace = eventPlace;
 	}
 
-	public ArrayList<EventMethod> getEventMethod() {
+	public List<EventMethod> getEventMethod() {
 		return eventMethod;
 	}
 
-	public void setEventMethod(ArrayList<EventMethod> eventMethod) {
+	public void setEventMethod(List<EventMethod> eventMethod) {
 		this.eventMethod = eventMethod;
 	}
 
-	public ArrayList<EventMaterialsTech> getEventMaterialsTech() {
+	public List<EventMaterialsTech> getEventMaterialsTech() {
 		return eventMaterialsTech;
 	}
 
-	public void setEventMaterialsTech(ArrayList<EventMaterialsTech> eventMaterialsTech) {
+	public void setEventMaterialsTech(List<EventMaterialsTech> eventMaterialsTech) {
 		this.eventMaterialsTech = eventMaterialsTech;
 	}
 
-	public ArrayList<ThingPresent> getThingPresent() {
+	public List<ThingPresent> getThingPresent() {
 		return thingPresent;
 	}
 
-	public void setThingPresent(ArrayList<ThingPresent> thingPresent) {
+	public void setThingPresent(List<ThingPresent> thingPresent) {
 		this.thingPresent = thingPresent;
 	}
 
-	public ArrayList<RelatedEventSet> getRelatedEventSet() {
+	public List<RelatedEventSet> getRelatedEventSet() {
 		return relatedEventSet;
 	}
 
-	public void setRelatedEventSet(ArrayList<RelatedEventSet> relatedEventSet) {
+	public void setRelatedEventSet(List<RelatedEventSet> relatedEventSet) {
 		this.relatedEventSet = relatedEventSet;
 	}
 
-	public ArrayList<EventDescriptionSet> getEventDescriptionSet() {
+	public List<EventDescriptionSet> getEventDescriptionSet() {
 		return eventDescriptionSet;
 	}
 
-	public void setEventDescriptionSet(ArrayList<EventDescriptionSet> eventDescriptionSet) {
+	public void setEventDescriptionSet(List<EventDescriptionSet> eventDescriptionSet) {
 		this.eventDescriptionSet = eventDescriptionSet;
 	}
 }

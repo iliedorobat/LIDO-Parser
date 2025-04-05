@@ -1,11 +1,11 @@
 package ro.webdata.parser.xml.lido.core.complex.measurementsSetComplexType;
 
-import java.util.ArrayList;
-
+import ro.webdata.parser.xml.lido.common.PrintMessages;
 import ro.webdata.parser.xml.lido.core.leaf.measurementType.MeasurementType;
 import ro.webdata.parser.xml.lido.core.leaf.measurementUnit.MeasurementUnit;
 import ro.webdata.parser.xml.lido.core.leaf.measurementValue.MeasurementValue;
-import ro.webdata.parser.xml.lido.common.PrintMessages;
+
+import java.util.List;
 
 /**
  * <link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
@@ -40,15 +40,15 @@ import ro.webdata.parser.xml.lido.common.PrintMessages;
  *
  */
 public class MeasurementsSetComplexType {
-	private ArrayList<MeasurementType> measurementType;
-	private ArrayList<MeasurementUnit> measurementUnit;
+	private List<MeasurementType> measurementType;
+	private List<MeasurementUnit> measurementUnit;
 	private MeasurementValue measurementValue;
 	private PrintMessages printMessages = new PrintMessages();
 
 	public MeasurementsSetComplexType() {}
 
-	public MeasurementsSetComplexType(ArrayList<MeasurementType> measurementType,
-			ArrayList<MeasurementUnit> measurementUnit, MeasurementValue measurementValue) {
+	public MeasurementsSetComplexType(List<MeasurementType> measurementType,
+			List<MeasurementUnit> measurementUnit, MeasurementValue measurementValue) {
 		setMeasurementType(measurementType);
 		setMeasurementUnit(measurementUnit);
 		setMeasurementValue(measurementValue);
@@ -66,19 +66,19 @@ public class MeasurementsSetComplexType {
 		}
 	}
 
-	public ArrayList<MeasurementType> getMeasurementType() {
+	public List<MeasurementType> getMeasurementType() {
 		return measurementType;
 	}
 
-	public void setMeasurementType(ArrayList<MeasurementType> measurementType) {
+	public void setMeasurementType(List<MeasurementType> measurementType) {
 		this.measurementType = measurementType;
 	}
 
-	public ArrayList<MeasurementUnit> getMeasurementUnit() {
+	public List<MeasurementUnit> getMeasurementUnit() {
 		return measurementUnit;
 	}
 
-	public void setMeasurementUnit(ArrayList<MeasurementUnit> measurementUnit) {
+	public void setMeasurementUnit(List<MeasurementUnit> measurementUnit) {
 		this.measurementUnit = measurementUnit;
 	}
 

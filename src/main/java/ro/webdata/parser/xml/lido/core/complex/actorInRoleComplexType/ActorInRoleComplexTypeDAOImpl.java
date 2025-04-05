@@ -1,21 +1,22 @@
 package ro.webdata.parser.xml.lido.core.complex.actorInRoleComplexType;
 
-import ro.webdata.parser.xml.lido.core.leaf.actor.ActorDAO;
-import ro.webdata.parser.xml.lido.core.leaf.attributionQualifierActor.AttributionQualifierActorDAO;
-import ro.webdata.parser.xml.lido.core.leaf.extentActor.ExtentActorDAO;
-import ro.webdata.parser.xml.lido.core.leaf.roleActor.RoleActorDAO;
-import ro.webdata.parser.xml.lido.core.leaf.actor.ActorDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.attributionQualifierActor.AttributionQualifierActorDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.extentActor.ExtentActorDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.roleActor.RoleActorDAOImpl;
-import ro.webdata.parser.xml.lido.core.leaf.actor.Actor;
-import ro.webdata.parser.xml.lido.core.leaf.attributionQualifierActor.AttributionQualifierActor;
-import ro.webdata.parser.xml.lido.core.leaf.extentActor.ExtentActor;
-import ro.webdata.parser.xml.lido.core.leaf.roleActor.RoleActor;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import ro.webdata.parser.xml.lido.core.leaf.actor.Actor;
+import ro.webdata.parser.xml.lido.core.leaf.actor.ActorDAO;
+import ro.webdata.parser.xml.lido.core.leaf.actor.ActorDAOImpl;
+import ro.webdata.parser.xml.lido.core.leaf.attributionQualifierActor.AttributionQualifierActor;
+import ro.webdata.parser.xml.lido.core.leaf.attributionQualifierActor.AttributionQualifierActorDAO;
+import ro.webdata.parser.xml.lido.core.leaf.attributionQualifierActor.AttributionQualifierActorDAOImpl;
+import ro.webdata.parser.xml.lido.core.leaf.extentActor.ExtentActor;
+import ro.webdata.parser.xml.lido.core.leaf.extentActor.ExtentActorDAO;
+import ro.webdata.parser.xml.lido.core.leaf.extentActor.ExtentActorDAOImpl;
+import ro.webdata.parser.xml.lido.core.leaf.roleActor.RoleActor;
+import ro.webdata.parser.xml.lido.core.leaf.roleActor.RoleActorDAO;
+import ro.webdata.parser.xml.lido.core.leaf.roleActor.RoleActorDAOImpl;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ActorInRoleComplexTypeDAOImpl implements ActorInRoleComplexTypeDAO {
     private static ActorDAO actorParser = new ActorDAOImpl();
@@ -25,9 +26,9 @@ public class ActorInRoleComplexTypeDAOImpl implements ActorInRoleComplexTypeDAO 
 
     public ActorInRoleComplexType getActorInRoleComplexType(Node node) {
         Actor actor = null;
-        ArrayList<RoleActor> roleActorList = new ArrayList<RoleActor>();
-        ArrayList<AttributionQualifierActor> attributionQualifierActorList = new ArrayList<AttributionQualifierActor>();
-        ArrayList<ExtentActor> extentActorList = new ArrayList<ExtentActor>();
+        List<RoleActor> roleActorList = new ArrayList<RoleActor>();
+        List<AttributionQualifierActor> attributionQualifierActorList = new ArrayList<AttributionQualifierActor>();
+        List<ExtentActor> extentActorList = new ArrayList<ExtentActor>();
         NodeList childNodeList = node.getChildNodes();
 
         for (int i = 0; i < childNodeList.getLength(); i++) {

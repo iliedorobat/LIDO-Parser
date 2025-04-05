@@ -1,9 +1,9 @@
 package ro.webdata.parser.xml.lido.core.complex.actorSetComplexType;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.leaf.actor.Actor;
 import ro.webdata.parser.xml.lido.core.leaf.displayActor.DisplayActor;
+
+import java.util.List;
 
 /**
  * <link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
@@ -37,21 +37,21 @@ import ro.webdata.parser.xml.lido.core.leaf.displayActor.DisplayActor;
  *
  */
 public class ActorSetComplexType {
-	private ArrayList<DisplayActor> displayActor;
+	private List<DisplayActor> displayActor;
 	private Actor actor;
 
 	public ActorSetComplexType() {}
 
-	public ActorSetComplexType(ArrayList<DisplayActor> displayActor, Actor actor) {
+	public ActorSetComplexType(List<DisplayActor> displayActor, Actor actor) {
 		setActor(actor);
 		setDisplayActor(displayActor);
 	}
 
-	public ArrayList<DisplayActor> getDisplayActor() {
+	public List<DisplayActor> getDisplayActor() {
 		return displayActor;
 	}
 
-	public void setDisplayActor(ArrayList<DisplayActor> displayActor) {
+	public void setDisplayActor(List<DisplayActor> displayActor) {
 		this.displayActor = displayActor;
 	}
 

@@ -1,8 +1,8 @@
 package ro.webdata.parser.xml.lido.core.wrap.objectMeasurementsWrap;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.set.objectMeasurementsSet.ObjectMeasurementsSet;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../../javadoc.css"/>
  * <div class="lido">
@@ -24,19 +24,19 @@ import ro.webdata.parser.xml.lido.core.set.objectMeasurementsSet.ObjectMeasureme
  *
  */
 public class ObjectMeasurementsWrap {
-	private ArrayList<ObjectMeasurementsSet> objectMeasurementsSet;
+	private List<ObjectMeasurementsSet> objectMeasurementsSet;
 
 	public ObjectMeasurementsWrap() {}
 
-	public ObjectMeasurementsWrap(ArrayList<ObjectMeasurementsSet> objectMeasurementsSet) {
+	public ObjectMeasurementsWrap(List<ObjectMeasurementsSet> objectMeasurementsSet) {
 		setObjectMeasurementsSet(objectMeasurementsSet);
 	}
 
-	public ArrayList<ObjectMeasurementsSet> getObjectMeasurementsSet() {
+	public List<ObjectMeasurementsSet> getObjectMeasurementsSet() {
 		return objectMeasurementsSet;
 	}
 
-	public void setObjectMeasurementsSet(ArrayList<ObjectMeasurementsSet> objectMeasurementsSet) {
+	public void setObjectMeasurementsSet(List<ObjectMeasurementsSet> objectMeasurementsSet) {
 		this.objectMeasurementsSet = objectMeasurementsSet;
 	}
 }

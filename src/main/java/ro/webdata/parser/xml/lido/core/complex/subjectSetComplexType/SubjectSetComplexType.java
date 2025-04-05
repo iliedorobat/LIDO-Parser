@@ -1,9 +1,9 @@
 package ro.webdata.parser.xml.lido.core.complex.subjectSetComplexType;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.leaf.displaySubject.DisplaySubject;
 import ro.webdata.parser.xml.lido.core.leaf.subject.Subject;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
  * <div class="lido">
@@ -36,21 +36,21 @@ import ro.webdata.parser.xml.lido.core.leaf.subject.Subject;
  *
  */
 public class SubjectSetComplexType {
-	private ArrayList<DisplaySubject> displaySubject;
+	private List<DisplaySubject> displaySubject;
 	private Subject subject;
 
 	public SubjectSetComplexType() {}
 
-	public SubjectSetComplexType(ArrayList<DisplaySubject> displaySubject, Subject subjectComplexType) {
+	public SubjectSetComplexType(List<DisplaySubject> displaySubject, Subject subjectComplexType) {
 		setDisplaySubject(displaySubject);
 		setSubject(subjectComplexType);
 	}
 
-	public ArrayList<DisplaySubject> getDisplaySubject() {
+	public List<DisplaySubject> getDisplaySubject() {
 		return displaySubject;
 	}
 
-	public void setDisplaySubject(ArrayList<DisplaySubject> displaySubject) {
+	public void setDisplaySubject(List<DisplaySubject> displaySubject) {
 		this.displaySubject = displaySubject;
 	}
 

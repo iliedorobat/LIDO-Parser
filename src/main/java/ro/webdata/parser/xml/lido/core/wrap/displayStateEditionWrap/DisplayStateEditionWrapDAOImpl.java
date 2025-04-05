@@ -13,6 +13,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DisplayStateEditionWrapDAOImpl implements DisplayStateEditionWrapDAO {
     private static DisplayStateDAO displayStateParser = new DisplayStateDAOImpl();
@@ -20,9 +21,9 @@ public class DisplayStateEditionWrapDAOImpl implements DisplayStateEditionWrapDA
     private static SourceStateEditionDAO sourceStateEditionParser = new SourceStateEditionDAOImpl();
 
     public DisplayStateEditionWrap getDisplayStateEditionWrap(Node node) {
-        ArrayList<DisplayState> displayStateList = new ArrayList<DisplayState>();
-        ArrayList<DisplayEdition> displayEditionList = new ArrayList<DisplayEdition>();
-        ArrayList<SourceStateEdition> sourceStateEditionList = new ArrayList<SourceStateEdition>();
+        List<DisplayState> displayStateList = new ArrayList<DisplayState>();
+        List<DisplayEdition> displayEditionList = new ArrayList<DisplayEdition>();
+        List<SourceStateEdition> sourceStateEditionList = new ArrayList<SourceStateEdition>();
         NodeList childNodeList = node.getChildNodes();
 
         for (int i = 0; i < childNodeList.getLength(); i++) {

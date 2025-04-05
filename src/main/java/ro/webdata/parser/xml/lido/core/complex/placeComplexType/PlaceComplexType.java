@@ -1,7 +1,5 @@
 package ro.webdata.parser.xml.lido.core.complex.placeComplexType;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.attribute.LidoGeographicalEntity;
 import ro.webdata.parser.xml.lido.core.attribute.LidoPoliticalEntity;
 import ro.webdata.parser.xml.lido.core.leaf.gml.Gml;
@@ -9,6 +7,8 @@ import ro.webdata.parser.xml.lido.core.leaf.partOfPlace.PartOfPlace;
 import ro.webdata.parser.xml.lido.core.leaf.placeClassification.PlaceClassification;
 import ro.webdata.parser.xml.lido.core.leaf.placeID.PlaceID;
 import ro.webdata.parser.xml.lido.core.set.namePlaceSet.NamePlaceSet;
+
+import java.util.List;
 
 /**<link rel="stylesheet" type="text/css" href="../../../javadoc.css"/>
  * <div class="lido">
@@ -66,18 +66,18 @@ import ro.webdata.parser.xml.lido.core.set.namePlaceSet.NamePlaceSet;
  *
  */
 public class PlaceComplexType {
-	private ArrayList<PlaceID> placeID;
-	private ArrayList<NamePlaceSet> namePlaceSet;
-	private ArrayList<Gml> gml;
-	private ArrayList<PartOfPlace> partOfPlace;
-	private ArrayList<PlaceClassification> placeClassification;
+	private List<PlaceID> placeID;
+	private List<NamePlaceSet> namePlaceSet;
+	private List<Gml> gml;
+	private List<PartOfPlace> partOfPlace;
+	private List<PlaceClassification> placeClassification;
 	private LidoPoliticalEntity lidoPoliticalEntity;
 	private LidoGeographicalEntity lidoGeographicalEntity;
 
 	public PlaceComplexType() {}
 
-	public PlaceComplexType(ArrayList<PlaceID> placeID, ArrayList<NamePlaceSet> namePlaceSet,
-			ArrayList<Gml> gml, ArrayList<PartOfPlace> partOfPlace, ArrayList<PlaceClassification> placeClassification,
+	public PlaceComplexType(List<PlaceID> placeID, List<NamePlaceSet> namePlaceSet,
+			List<Gml> gml, List<PartOfPlace> partOfPlace, List<PlaceClassification> placeClassification,
 			LidoPoliticalEntity politicalEntity, LidoGeographicalEntity geographicalEntity) {
 		setPlaceID(placeID);
 		setNamePlaceSet(namePlaceSet);
@@ -88,43 +88,43 @@ public class PlaceComplexType {
 		setGeographicalEntity(geographicalEntity);
 	}
 
-	public ArrayList<PlaceID> getPlaceID() {
+	public List<PlaceID> getPlaceID() {
 		return placeID;
 	}
 
-	public void setPlaceID(ArrayList<PlaceID> placeID) {
+	public void setPlaceID(List<PlaceID> placeID) {
 		this.placeID = placeID;
 	}
 
-	public ArrayList<NamePlaceSet> getNamePlaceSet() {
+	public List<NamePlaceSet> getNamePlaceSet() {
 		return namePlaceSet;
 	}
 
-	public void setNamePlaceSet(ArrayList<NamePlaceSet> namePlaceSet) {
+	public void setNamePlaceSet(List<NamePlaceSet> namePlaceSet) {
 		this.namePlaceSet = namePlaceSet;
 	}
 
-	public ArrayList<Gml> getGml() {
+	public List<Gml> getGml() {
 		return gml;
 	}
 
-	public void setGml(ArrayList<Gml> gml) {
+	public void setGml(List<Gml> gml) {
 		this.gml = gml;
 	}
 
-	public ArrayList<PartOfPlace> getPartOfPlace() {
+	public List<PartOfPlace> getPartOfPlace() {
 		return partOfPlace;
 	}
 
-	public void setPartOfPlace(ArrayList<PartOfPlace> partOfPlace) {
+	public void setPartOfPlace(List<PartOfPlace> partOfPlace) {
 		this.partOfPlace = partOfPlace;
 	}
 
-	public ArrayList<PlaceClassification> getPlaceClassification() {
+	public List<PlaceClassification> getPlaceClassification() {
 		return placeClassification;
 	}
 
-	public void setPlaceClassification(ArrayList<PlaceClassification> placeClassification) {
+	public void setPlaceClassification(List<PlaceClassification> placeClassification) {
 		this.placeClassification = placeClassification;
 	}
 

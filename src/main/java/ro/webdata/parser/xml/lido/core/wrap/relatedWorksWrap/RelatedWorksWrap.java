@@ -1,8 +1,9 @@
 package ro.webdata.parser.xml.lido.core.wrap.relatedWorksWrap;
 
-import java.util.ArrayList;
-
 import ro.webdata.parser.xml.lido.core.set.relatedWorkSet.RelatedWorkSet;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <link rel="stylesheet" type="text/css" href="../../../../javadoc.css"/>
@@ -25,19 +26,19 @@ import ro.webdata.parser.xml.lido.core.set.relatedWorkSet.RelatedWorkSet;
  *
  */
 public class RelatedWorksWrap {
-	private ArrayList<RelatedWorkSet> relatedWorkSet = new ArrayList<RelatedWorkSet>();
+	private List<RelatedWorkSet> relatedWorkSet = new ArrayList<RelatedWorkSet>();
 
 	public RelatedWorksWrap() {}
 
-	public RelatedWorksWrap(ArrayList<RelatedWorkSet> relatedWorkSet) {
+	public RelatedWorksWrap(List<RelatedWorkSet> relatedWorkSet) {
 		setRelatedWorkSet(relatedWorkSet);
 	}
 
-	public ArrayList<RelatedWorkSet> getRelatedWorkSet() {
+	public List<RelatedWorkSet> getRelatedWorkSet() {
 		return relatedWorkSet;
 	}
 
-	public void setRelatedWorkSet(ArrayList<RelatedWorkSet> relatedWorkSet) {
+	public void setRelatedWorkSet(List<RelatedWorkSet> relatedWorkSet) {
 		this.relatedWorkSet = relatedWorkSet;
 	}
 }
