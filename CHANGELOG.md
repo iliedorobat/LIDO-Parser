@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ---
 
 ## 1.2
-- Bump commons-echo to 1.5
+- Bump commons-echo to 1.6
 - Added gradle support
 
 ## 1.1
